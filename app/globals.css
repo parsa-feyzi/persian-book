@@ -48,3 +48,20 @@ body {
   color: var(--foreground);
   font-family: dana;
 }
+
+/* swiper */
+.swiper {
+  z-index: -1;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply opacity-0 text-black/40! hover:text-black/80! duration-200 md:block! hidden! scale-90 active:scale-85
+}
+
+.swiper:hover .swiper-button-next {
+  @apply opacity-100 
+}
+
+.swiper:hover .swiper-button-prev {
+  @apply opacity-100
+}
