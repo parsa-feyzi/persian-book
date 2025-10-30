@@ -68,7 +68,7 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
       </div>
       <Link href={href} className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14">
         <img
-          className="lg:h-90 lg:min-w-62 md:h-72 md:min-w-50 h-56 shadow-xl object-cover rounded-lg"
+          className="lg:h-90 lg:min-w-62 md:h-72 md:min-w-50 h-56 shadow-xl shadow-black/5 object-cover rounded-lg"
           src={`/images/${image}`}
         />
         <div

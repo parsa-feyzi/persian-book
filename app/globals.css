@@ -51,11 +51,14 @@ body {
 
 /* swiper */
 .swiper {
-  z-index: -1;
+  @apply z-0!
+}
+swiper-container {
+  z-index: 0 !important;
 }
 
 .swiper-button-next, .swiper-button-prev {
-  @apply opacity-0 text-black/40! hover:text-black/80! duration-200 md:block! hidden! scale-90 active:scale-85
+  @apply opacity-0 text-black/40! hover:text-black/80! duration-150 md:block! hidden! scale-90 active:scale-85
 }
 
 .swiper:hover .swiper-button-next {

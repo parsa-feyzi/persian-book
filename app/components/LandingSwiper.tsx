@@ -13,7 +13,7 @@ import LandingItem from "./LandingItem";
 
 export default function SwiperPatern() {
   return (
-    <div className="-z-10">
+    <section>
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
@@ -50,13 +50,13 @@ export default function SwiperPatern() {
           <LandingItem
             title="مذاکره"
             href=""
-            color="#ff005b"
+            color="#ff0050"
             discount="15"
             image="Negotiation-by-Max-Bazerman.jpg"
             shortDiscription="بازی تغییر کرده است و دیگر نمی‌توان با تاکتیک‌های دیروز، در مذاکره‌های امروزی پیروز شد"
           />
         </SwiperSlide>
       </Swiper>
-    </div>
+    </section>
   );
 }
