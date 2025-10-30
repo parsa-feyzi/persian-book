@@ -13,32 +13,37 @@ interface I_Props {
 
 function LandingItem({ title, image, discount, shortDiscription, href, color }: I_Props) {
   return (
-    <div className="relative h-[calc(100vh-5rem)] flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end">
-      <div
-        style={{
-          backgroundColor: `color-mix(in oklab, ${color} 6%, transparent)`,
-        }}
-        className={`md:grid hidden absolute top-22 text-black/85 lg:right-32 right-22 size-12 rounded-full place-content-center pt-1.5 font-[dana-b] text-2xl`}
-      >
-        {discount}
-        <span
-          style={{ color, opacity: 0.3 }}
-          className="absolute top-1 left-1/2 -translate-x-1/2 text-[2.5rem] -z-1"
+    <div className="relative md:h-[calc(100vh-8rem)]  flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
+      {/* start off box */}
+      <div>
+        <div
+          style={{
+            backgroundColor: `color-mix(in oklab, ${color} 6%, transparent)`,
+          }}
+          className={`grid absolute md:top-12 top-2 text-black/85 lg:right-32 md:right-22 md:left-auto left-8 md:size-12 size-8 rounded-full place-content-center pt-1.5 font-[dana-b] md:text-2xl text-lg`}
         >
-          %
-        </span>
+          {discount}
+          <span
+            style={{ color, opacity: 0.3 }}
+            className="absolute md:top-[7px] top-1 left-1/2 -translate-x-1/2 md:text-[2.5rem] text-3xl -z-1"
+          >
+            %
+          </span>
+        </div>
+        <div
+          style={{ backgroundColor: color, opacity: 0.08 }}
+          className={`absolute md:top-11 top-1 lg:right-31 md:right-21 md:left-auto left-7 md:size-14 size-10 rounded-full grid place-content-center pt-1 font-[dana-b]`}
+        ></div>
+        <div
+          style={{ backgroundColor: color, opacity: 0.03 }}
+          className={`absolute md:top-10 top-0 lg:right-30 md:right-20 md:left-auto left-6 md:size-16 size-12 rounded-full grid place-content-center pt-1 font-[dana-b]`}
+        ></div>
+        <div style={{ color }} className="absolute md:top-20 top-8 lg:right-33 md:right-23 md:left-auto left-7.5 md:text-sm text-xs font-[dana-db]">تخفیف</div>
       </div>
-      <div
-        style={{ backgroundColor: color, opacity: 0.08 }}
-        className={`absolute top-21 lg:right-31 right-21 size-14 rounded-full md:grid hidden place-content-center pt-1 font-[dana-b] text-2xl`}
-      ></div>
-      <div
-        style={{ backgroundColor: color, opacity: 0.03 }}
-        className={`absolute top-20 lg:right-30 right-20 size-16 rounded-full md:grid hidden place-content-center pt-1 font-[dana-b] text-2xl`}
-      ></div>
+      {/* end off box */}
       <div className="md:mt-0 mt-6">
         <div>
-          <div className="lg:text-4xl md:text-2xl text-2xl xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
+          <div className="lg:text-4xl text-2xl  xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
             کتاب{" "}
             {
               <span style={{ color }} className="font-[dana-xb] xl:text-6xl lg:text-5xl md:text-3xl">
@@ -47,13 +52,13 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
             }{" "}
             منتشر شد
           </div>
-          <div className="lg:text-lg mt-2 md:text-right text-center">{shortDiscription}</div>
+          <div className="lg:text-lg md:text-base text-sm md:mt-2 mt-1 md:text-right text-center">{shortDiscription}</div>
         </div>
         <Button
           style={{
             backgroundColor: `color-mix(in oklab, ${color} 100%, transparent)`,
           }}
-          className="md:translate-y-12 md:mt-0 mt-5 md:mx-0 mx-auto md:rounded-full rounded-lg"
+          className="md:translate-y-12 md:mt-0 mt-5 md:mx-0 mx-auto md:rounded-full rounded-lg md:duration-200 md:hover:-translate-x-2"
         >
           <Link
             href={href}

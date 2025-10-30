@@ -18,7 +18,7 @@ export default function SwiperPatern() {
         slidesPerView={1}
         centeredSlides={true}
         autoplay={{
-          delay: 6000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         loop={true}
