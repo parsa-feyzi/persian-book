@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MainLayout from "./components/MainLayout";
+import MainLayout from "./components/MainLayout"
+// @ts-ignore
+import "swiper/css";
+// @ts-ignore
+import "swiper/css/pagination";
+// @ts-ignore
+import "swiper/css/navigation";
+
 
 export const metadata: Metadata = {
   title: {

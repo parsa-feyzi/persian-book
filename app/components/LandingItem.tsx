@@ -1,11 +1,12 @@
 import Button from "./designSystem/Button";
+import DiscountBox from "./DiscountBox";
 import ArrowIcon from "./icons/ArrowIcon";
 import Link from "next/link";
 
 interface I_Props {
   title: string;
   image: string;
-  discount: string;
+  discount: number;
   shortDiscription: string;
   href: string;
   color: string;
@@ -13,34 +14,8 @@ interface I_Props {
 
 function LandingItem({ title, image, discount, shortDiscription, href, color }: I_Props) {
   return (
-    <div className="relative md:h-[calc(100vh-8rem)]  flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
-      {/* start off box */}
-      <div>
-        <div
-          style={{
-            backgroundColor: `color-mix(in oklab, ${color} 6%, transparent)`,
-          }}
-          className={`grid absolute md:top-12 top-2 text-black/85 lg:right-32 md:right-22 md:left-auto left-8 md:size-12 size-8 rounded-full place-content-center pt-1.5 font-[dana-b] md:text-2xl text-lg`}
-        >
-          {discount}
-          <span
-            style={{ color, opacity: 0.3 }}
-            className="absolute md:top-[7px] top-1 left-1/2 -translate-x-1/2 md:text-[2.5rem] text-3xl -z-1"
-          >
-            %
-          </span>
-        </div>
-        <div
-          style={{ backgroundColor: color, opacity: 0.08 }}
-          className={`absolute md:top-11 top-1 lg:right-31 md:right-21 md:left-auto left-7 md:size-14 size-10 rounded-full grid place-content-center pt-1 font-[dana-b]`}
-        ></div>
-        <div
-          style={{ backgroundColor: color, opacity: 0.03 }}
-          className={`absolute md:top-10 top-0 lg:right-30 md:right-20 md:left-auto left-6 md:size-16 size-12 rounded-full grid place-content-center pt-1 font-[dana-b]`}
-        ></div>
-        <div style={{ color }} className="absolute md:top-20 top-8 lg:right-33 md:right-23 md:left-auto left-7.5 md:text-sm text-xs font-[dana-db]">تخفیف</div>
-      </div>
-      {/* end off box */}
+    <div className="relative lg:h-[calc(100vh-8rem)] md:h-[calc(100vh-12rem)]   flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
+      <DiscountBox color={color} discount={discount} styles="md:top-8 top-2 md:right-auto right-[75vw]" />
       <div className="md:mt-0 mt-6">
         <div>
           <div className="lg:text-4xl text-2xl  xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
@@ -73,7 +48,7 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
       </div>
       <Link href={href} className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14">
         <img
-          className="lg:h-90 lg:min-w-62 md:h-72 md:min-w-50 h-56 shadow-xl shadow-black/5 object-cover rounded-lg"
+          className="lg:h-80 lg:min-w-58 md:h-72 md:min-w-50 h-56 shadow-xl shadow-black/5 object-cover rounded-lg"
           src={`/images/${image}`}
         />
         <div

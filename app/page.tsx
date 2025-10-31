@@ -1,11 +1,15 @@
-import SwiperPatern from "./components/LandingSwiper";
+import CategoriesBox from "./components/CategoriesBox";
+import LandingSwiper from "./components/LandingSwiper";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="md:pt-19.5 pt-16">
-      <SwiperPatern />
+      <LandingSwiper />
       <div className="px-[6vw]">
-        <div className="h-96 border-t-2 border-neutral-500/15"></div>
+        <div className="border-t-2 border-neutral-500/15 mt-6 pt-6">
+          <CategoriesBox />
+          {/* <div>new books</div> */}
+        </div>
       </div>
     </div>
   );
