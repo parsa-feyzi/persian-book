@@ -61,22 +61,47 @@ body {
   @apply hover:bg-[#171717]/50!
 }
 
-/* swiper */
-.swiper {
+/*________________ swiper _______________*/
+ .swiper {
   @apply z-0!
 }
-swiper-container {
-  z-index: 0 !important;
-}
-
-.swiper-button-next, .swiper-button-prev {
+/* landing swiper */
+.landingSwiper .swiper-button-next, .landingSwiper .swiper-button-prev {
   @apply opacity-0 text-black/40! hover:text-black/80! duration-150 md:block! hidden! scale-90 active:scale-85
 }
 
-.swiper:hover .swiper-button-next {
+.landingSwiper .swiper:hover .swiper-button-next {
   @apply opacity-100 
 }
 
-.swiper:hover .swiper-button-prev {
+.landingSwiper .swiper:hover .swiper-button-prev {
   @apply opacity-100
+}
+/* categories swiper */
+.categoriesSwiper .swiper-button-disabled {
+  @apply hidden!
+}
+
+.categoriesSwiper .swiper {
+  @apply lg:px-[4vw] sm:px-[7vw] px-[10vw]
+}
+
+.categoriesSwiper .swiper-button-next, .categoriesSwiper .swiper-button-prev {
+  @apply bg-(--prim)/60 rounded-full lg:p-3.5 sm:p-2 p-2 lg:size-12 sm:size-10 size-9 text-white lg:-translate-y-3 md:-translate-y-2 active:scale-95 shadow-xl/20
+}
+
+.categoriesSwiper .swiper-button-next {
+  transform: translateX(-3px);
+  -webkit-transform: translateX(-3px);
+  -moz-transform: translateX(-3px);
+  -ms-transform: translateX(-3px);
+  -o-transform: translateX(-3px);
+}
+
+.categoriesSwiper .swiper-button-prev {
+  transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+  -moz-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+  -o-transform: translateX(3px);
 }

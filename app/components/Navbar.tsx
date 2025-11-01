@@ -8,7 +8,7 @@ import NavHamberMenu from "./NavHamberMenu";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full md:py-5 py-3 bg-(--nut-prim)/40 backdrop-blur-lg z-1!">
+    <nav className="fixed w-full md:py-5 py-3 bg-(--nut-prim)/30 backdrop-blur-lg z-1!">
       <Container>
         <div className="flex items-center justify-between">
           <NavHamberMenu />

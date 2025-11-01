@@ -7,7 +7,7 @@ import LandingItem from "./LandingItem";
 
 export default function LandingSwiper() {
   return (
-    <section>
+    <section className="landingSwiper">
       <Swiper
         slidesPerView={1}
         centeredSlides={true}
