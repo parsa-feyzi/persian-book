@@ -1,4 +1,5 @@
 import CategoriesBox from "./components/CategoriesSwiperBox";
+import DiscountedProductsSwiper from "./components/DiscountedProductsSwiper";
 import LandingSwiper from "./components/LandingSwiper";
 
 export default async function Home() {
@@ -8,7 +9,7 @@ export default async function Home() {
       <div className="px-[6vw]">
         <div className="">
           <CategoriesBox />
-          {/* <div>new books</div> */}
+          <DiscountedProductsSwiper />
         </div>
       </div>
     </div>

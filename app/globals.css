@@ -78,7 +78,7 @@ body {
   @apply opacity-100
 }
 /* categories swiper */
-.categoriesSwiper .swiper-button-disabled {
+.categoriesSwiper .swiper-button-disabled, .discountedProductsSwiper .swiper-button-disabled {
   @apply hidden!
 }
 
@@ -104,4 +104,12 @@ body {
   -moz-transform: translateX(3px);
   -ms-transform: translateX(3px);
   -o-transform: translateX(3px);
+}
+/* discounted products swiper */
+.discountedProductsSwiper .swiper-button-next, .discountedProductsSwiper .swiper-button-prev {
+  @apply bg-(--seco)/30 rounded-full lg:p-3.5 sm:p-2 p-2 lg:size-12 sm:size-10 size-9 text-black lg:-translate-y-3 md:-translate-y-2 active:scale-95
+}
+
+.discountedProductsSwiper .swiper {
+  @apply lg:pe-[4vw]
 }
