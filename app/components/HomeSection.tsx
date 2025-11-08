@@ -7,7 +7,7 @@ interface I_Props { href: string, title: string; children: ReactNode }
 function HomeSection({ href, title, children }: I_Props) {
   return (
     <section className="mt-18">
-      <div className="flex justify-between items-center gap-4 flex-wrap mb-9">
+      <div className="flex justify-between items-center gap-4 flex-wrap mb-8">
         <div className="relative">
           <div className="sm:text-[22px] text-lg font-[dana-xb]">{title} <span className="text-(--seco)">پـرشین بـوکـــ</span></div>
           <div className="absolute top-1/2 -translate-y-1/2 -right-6 w-[calc(100%-100px)] h-7 bg-linear-to-l from-(--prim)/10 -z-1">

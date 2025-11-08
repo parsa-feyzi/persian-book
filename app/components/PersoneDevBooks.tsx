@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
 import { SwiperSlide } from "swiper/react";
-import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import HomeSection from "./HomeSection";
+import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import ProductBox from "./ProductBox";
 
-function BestsellerProducts() {
+function PersoneDevBooks() {
   return (
-    <HomeSection href="/" title="پرفروش ترین کتاب‌های">
-      <HomeSwiperTemplate isAutoplay>
+    <HomeSection title="بهترین کتاب های توسعه فردی" href="/">
+      <HomeSwiperTemplate>
         <SwiperSlide>
           <ProductBox />
         </SwiperSlide>
@@ -38,4 +38,4 @@ function BestsellerProducts() {
   );
 }
 
-export default BestsellerProducts;
+export default PersoneDevBooks;

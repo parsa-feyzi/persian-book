@@ -4,6 +4,7 @@ import Container from "./components/Container";
 import DiscountedProductsSwiper from "./components/DiscountedProductsSwiper";
 import LandingSwiper from "./components/LandingSwiper";
 import LatestProducts from "./components/LatestProducts";
+import PersoneDevBooks from "./components/PersoneDevBooks";
 
 export default async function Home() {
   return (
@@ -15,6 +16,7 @@ export default async function Home() {
         <Container>
           <LatestProducts />
           <BestsellerProducts />
+          <PersoneDevBooks />
         </Container>
       </div>
     </div>

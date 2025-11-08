@@ -33,7 +33,7 @@ function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
           <Link href="/stor" className="block py-3 px-6 bg-linear-to-l from-(--seco)/3 to-(--seco)/1 text-(--prim)">فروشگاه</Link>
           <Link href="/weblog" className="block py-3 px-6">وبلاگ</Link>
           <div className="py-3 px-6 flex justify-between items-center">
-            <div>ارطبات با ما</div>
+            <div>ارتباط با ما</div>
             <div className="size-4 text-black/80">
               <ArrowDownIcon />
             </div>
