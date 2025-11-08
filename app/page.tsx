@@ -1,3 +1,4 @@
+import BestsellerProducts from "./components/BestsellerProducts";
 import CategoriesSwiperBox from "./components/CategoriesSwiperBox";
 import Container from "./components/Container";
 import DiscountedProductsSwiper from "./components/DiscountedProductsSwiper";
@@ -13,6 +14,7 @@ export default async function Home() {
         <DiscountedProductsSwiper />
         <Container>
           <LatestProducts />
+          <BestsellerProducts />
         </Container>
       </div>
     </div>

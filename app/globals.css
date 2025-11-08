@@ -142,3 +142,8 @@ body {
 .discountedProductBox:hover .discountedProductBox-showAndBuy {
  @apply opacity-100 flex translate-y-0 bottom-0
 }
+
+/* home swiper template */
+.home_swiper_template .swiper-button-next, .home_swiper_template .swiper-button-prev {
+  @apply  bg-white/85 border opacity-85 border-neutral-500/50 shadow-xl rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-13 sm:size-12 size-10 text-black lg:translate-y-1 active:scale-95 z-10!
+}
