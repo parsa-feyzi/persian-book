@@ -7,7 +7,7 @@ import LeafIcon from "./icons/LeafIcon"
 
 function CategoriesSwiperBox() {
   return (
-    <section className="categoriesSwiper border-t-2 border-neutral-500/15 my-6 py-12">
+    <section className="categoriesSwiper border-t-2 border-neutral-500/15 mt-6 mb-2 py-12">
       <Swiper
         slidesPerView={3}
         breakpoints={{

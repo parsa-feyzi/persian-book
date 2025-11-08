@@ -6,7 +6,6 @@
   --foreground: #171717;
   --prim:#009966;
   --seco: #61726b;
-  --nut-prim: #ecfdf5;
 }
 
 @font-face {
@@ -27,6 +26,11 @@
 @font-face {
   font-family: dana-xb;
   src: url('/fonts/dana\ extrabold.ttf');
+}
+
+@font-face {
+  font-family: iransans;
+  src: url('/fonts/iransansdnweblight.ttf');
 }
 
 @theme inline {
@@ -59,6 +63,15 @@ body {
   background-color: #1717174d;
   cursor: pointer;
   @apply hover:bg-[#171717]/50!
+}
+
+/*________________ cart-button _______________*/
+.cart-button-rail {
+  @apply -translate-x-8 duration-300
+}
+
+.cart-button:hover .cart-button-rail {
+  @apply translate-x-18
 }
 
 /*________________ swiper _______________*/
@@ -107,9 +120,25 @@ body {
 }
 /* discounted products swiper */
 .discountedProductsSwiper .swiper-button-next, .discountedProductsSwiper .swiper-button-prev {
-  @apply bg-(--seco)/30 rounded-full lg:p-3.5 sm:p-2 p-2 lg:size-12 sm:size-10 size-9 text-black lg:-translate-y-3 md:-translate-y-2 active:scale-95
+  @apply bg-white/85 border border-neutral-500/50 shadow rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-12 sm:size-10 size-9 text-black lg:translate-y-1 active:scale-95
 }
 
 .discountedProductsSwiper .swiper {
-  @apply lg:pe-[4vw]
+  @apply lg:pe-[4vw] sm:pe-[8vw] pe-[10vw]
+}
+/* discounted products box */
+.discountedProductBox-image {
+  @apply duration-100!
+}
+
+.discountedProductBox-showAndBuy {
+  @apply opacity-0 -bottom-6 duration-200!
+}
+
+.discountedProductBox:hover .discountedProductBox-image {
+ @apply opacity-85
+}
+
+.discountedProductBox:hover .discountedProductBox-showAndBuy {
+ @apply opacity-100 flex translate-y-0 bottom-0
 }
