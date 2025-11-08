@@ -21,7 +21,7 @@ function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
         <div className="w-full flex items-center p-3 py-5 bg-(--seco)/3">
           <input
             type="text"
-            placeholder="جستجو بین کتاب‌ها ..."
+            placeholder="جستجو کتاب‌، نویسنده، ژانر..."
             className="w-[calc(100%-1.5rem)] placeholder:text-(--seco)/70 border-none outline-none px-2 text-sm"
           />
           <div className="size-[17px] mb-0.5 text-emerald-800">

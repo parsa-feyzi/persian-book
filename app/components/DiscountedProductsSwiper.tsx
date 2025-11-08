@@ -11,10 +11,10 @@ function DiscountedProductsSwiper() {
     <section className="discountedProductsSwiper relative overflow-hidden lg:px-4">
       <div className="absolute -top-22 -left-10 text-[24rem] text-white/20 font-bold">%</div>
       <div className="flex-col items-center justify-between py-5 lg:rounded-2xl bg-(--prim)/50 lg:px-0 px-4">
-        <div className="lg:hidden pb-4 text-white flex items-center justify-between gap-4">
+        <div className="lg:hidden pb-4 text-white flex items-center justify-between gap-2">
           <div className="sm:text-xl text-lg font-[dana-db]">پیشـنهاد شگـفت انگـیـز</div>
           <div className="text-sm flex items-center gap-1">
-            <div>همه</div>
+            <div>همه کتاب‌ها</div>
             <div className="size-3 mb-0.5"><ArrowDownIcon styles={{ rotate: "90deg" }} /></div>
           </div>
         </div>
