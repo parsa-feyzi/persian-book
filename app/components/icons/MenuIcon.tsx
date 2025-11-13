@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
+import { T_Style } from "@/public/types/types";
 
-function MenuIcon({ styles }: { styles?: CSSProperties }) {
+function MenuIcon({ styles }: T_Style) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

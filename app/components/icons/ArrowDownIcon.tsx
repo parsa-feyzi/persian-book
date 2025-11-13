@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-function ArrowDownIcon({ styles }: { styles?: CSSProperties }) {
+function ArrowDownIcon({ styles }: T_Style) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

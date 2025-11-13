@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
+import { T_Style } from "@/public/types/types";
 
-function CartIcon({ styles }: { styles?: CSSProperties }) {
+function CartIcon({ styles }: T_Style) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

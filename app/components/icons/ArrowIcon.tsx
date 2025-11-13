@@ -1,6 +1,5 @@
-import { CSSProperties } from "react";
-
-function ArrowIcon({ styles }: { styles?: CSSProperties }) {
+import { T_Style } from "@/public/types/types";
+function ArrowIcon({ styles }: T_Style) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

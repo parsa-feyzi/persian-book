@@ -6,7 +6,7 @@ interface I_Props { href: string, title: string; children: ReactNode }
 
 function HomeSection({ href, title, children }: I_Props) {
   return (
-    <section className="mt-18">
+    <section className="mt-22">
       <div className="flex justify-between items-center gap-4 flex-wrap mb-8">
         <div className="relative">
           <div className="sm:text-[22px] text-lg font-[dana-xb]">{title} <span className="text-(--seco)">پـرشین بـوکـــ</span></div>

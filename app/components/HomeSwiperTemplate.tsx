@@ -19,7 +19,7 @@ function HomeSwiperTemplate({ isAutoplay, children }: I_Props) {
             spaceBetween={10}
             centeredSlides={true}
             autoplay={{
-              delay: 2000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             loop={true}

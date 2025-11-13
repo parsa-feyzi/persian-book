@@ -91,7 +91,7 @@ body {
   @apply opacity-100
 }
 /* categories swiper */
-.categoriesSwiper .swiper-button-disabled, .discountedProductsSwiper .swiper-button-disabled {
+.categoriesSwiper .swiper-button-disabled, .discountedProductsSwiper .swiper-button-disabled, .home_swiper_template .swiper-button-disabled {
   @apply hidden!
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .categoriesSwiper .swiper-button-next, .categoriesSwiper .swiper-button-prev {
-  @apply bg-(--prim)/60 rounded-full lg:p-3.5 sm:p-2 p-2 lg:size-12 sm:size-10 size-9 text-white lg:-translate-y-3 md:-translate-y-2 active:scale-95 shadow-xl/20
+   @apply bg-white/85 border border-neutral-500/50 shadow-xl rounded-full lg:p-3.5 sm:p-2 p-2 lg:size-12 sm:size-10 size-9 text-black/70 lg:-translate-y-3 md:-translate-y-2 active:scale-95 shadow-xl/20
 }
 
 .categoriesSwiper .swiper-button-next {
@@ -145,5 +145,5 @@ body {
 
 /* home swiper template */
 .home_swiper_template .swiper-button-next, .home_swiper_template .swiper-button-prev {
-  @apply  bg-white/85 border opacity-85 border-neutral-500/50 shadow-xl rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-13 sm:size-12 size-10 text-black lg:translate-y-1 active:scale-95 z-10!
+  @apply bg-white/85 border opacity-85 border-neutral-500/50 shadow-xl rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-13 sm:size-12 size-11 text-black/70 lg:translate-y-1 active:scale-95 z-10!
 }

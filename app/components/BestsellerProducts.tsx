@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { SwiperSlide } from "swiper/react";
 import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import HomeSection from "./HomeSection";
 import ProductBox from "./ProductBox";
+import { SwiperSlide } from "swiper/react";
 
 function BestsellerProducts() {
   return (
@@ -32,7 +32,7 @@ function BestsellerProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <ProductBox />
-        </SwiperSlide>
+        </SwiperSlide> 
       </HomeSwiperTemplate>
     </HomeSection>
   );

@@ -4,6 +4,9 @@ import { SwiperSlide } from "swiper/react";
 import HomeSection from "./HomeSection";
 import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import ProductBox from "./ProductBox";
+import CirkelArrowIcon from "./icons/CirkelArrowIcon";
+import Link from "next/link";
+import SeeMore from "./SeeMore";
 
 function PersoneDevBooks() {
   return (
@@ -32,6 +35,21 @@ function PersoneDevBooks() {
         </SwiperSlide>
         <SwiperSlide>
           <ProductBox />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductBox />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductBox />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductBox />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductBox />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SeeMore href="/" />
         </SwiperSlide>
       </HomeSwiperTemplate>
     </HomeSection>
