@@ -14,20 +14,36 @@ interface I_Props {
 
 function LandingItem({ title, image, discount, shortDiscription, href, color }: I_Props) {
   return (
-    <div className="relative lg:h-[calc(100vh-8rem)] md:h-[calc(100vh-12rem)]   flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
-      <DiscountBox color={color} discount={discount} styles="md:top-8 top-2 md:right-auto right-[75vw]" />
+    <div className="relative lg:h-[calc(100vh-10rem)] md:h-[calc(100vh-12rem)] flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
+      <DiscountBox
+        color={color}
+        discount={discount}
+        styles="md:hidden block top-2 right-[75vw]"
+      />
       <div className="md:mt-0 mt-6">
+        <div className="mb-4">
+          <DiscountBox
+            color={color}
+            discount={discount}
+            styles="md:block relative! hidden"
+          />
+        </div>
         <div>
           <div className="lg:text-4xl text-2xl  xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
             کتاب{" "}
             {
-              <span style={{ color }} className="font-[dana-xb] xl:text-6xl lg:text-5xl md:text-3xl">
+              <span
+                style={{ color }}
+                className="font-[dana-xb] xl:text-6xl lg:text-5xl md:text-3xl"
+              >
                 {title}
               </span>
             }{" "}
             منتشر شد
           </div>
-          <div className="lg:text-lg md:text-base text-sm md:mt-2 mt-1 md:text-right text-center">{shortDiscription}</div>
+          <div className="lg:text-lg md:text-base text-sm md:mt-2 mt-1 md:text-right text-center text-neutral-700">
+            {shortDiscription}
+          </div>
         </div>
         <Button
           style={{
@@ -46,7 +62,10 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
           </Link>
         </Button>
       </div>
-      <Link href={href} className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14">
+      <Link
+        href={href}
+        className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14"
+      >
         <img
           className="lg:h-80 lg:min-w-58 md:h-72 md:min-w-50 h-56 shadow-xl shadow-black/5 object-cover rounded-lg"
           src={`/images/${image}`}

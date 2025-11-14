@@ -16,9 +16,27 @@ import GeoIcon from "./icons/GeoIcon";
 
 function Footer() {
   return (
-    <footer className="mt-25 sm:mt-32 bg-white dark:bg-darker pt-8 pb-4 md:pt-16 md:pb-8">
-      <Container>
-        <div className="pb-4 mb-4 sm:pb-8 sm:mb-8 border-b border-b-(--seco)/25 dark:border-b-dark">
+    <footer className="mt-25 relative overflow-hidden sm:mt-32 bg-white pt-8 md:pt-16 pb-4">
+      <div className="absolute z-0 md:opacity-85 opacity-50 -top-24 -right-24">
+        <div className="absolute top-8 right-8 size-32 bg-(--prim)/4 rounded-full"></div>
+        <div className="absolute top-0 right-0 size-54 bg-(--prim)/3.5 rounded-full"></div>
+        <div className="absolute -top-8 -right-8 size-76 bg-(--prim)/3 rounded-full"></div>
+        <div className="absolute -top-16 -right-16 size-98 bg-(--prim)/2.5 rounded-full"></div>
+        <div className="absolute -top-24 -right-24 size-120 bg-(--prim)/2 rounded-full"></div>
+        <div className="absolute -top-32 -right-32 size-142 bg-(--prim)/1.5 rounded-full"></div>
+        <div className="absolute -top-40 -right-40 size-164 bg-(--prim)/1 rounded-full"></div>
+      </div>
+      <div className="absolute z-0 md:opacity-85 opacity-75 -bottom-24 -left-24">
+        <div className="absolute bottom-8 left-8 size-32 bg-(--prim)/4 rounded-full"></div>
+        <div className="absolute bottom-0 left-0 size-54 bg-(--prim)/3.5 rounded-full"></div>
+        <div className="absolute -bottom-8 -left-8 size-76 bg-(--prim)/3 rounded-full"></div>
+        <div className="absolute -bottom-16 -left-16 size-98 bg-(--prim)/2.5 rounded-full"></div>
+        <div className="absolute -bottom-24 -left-24 size-120 bg-(--prim)/2 rounded-full"></div>
+        <div className="absolute -bottom-32 -left-32 size-142 bg-(--prim)/1.5 rounded-full"></div>
+        <div className="absolute -bottom-40 -left-40 size-164 bg-(--prim)/1 rounded-full"></div>
+      </div>
+      <Container styles={{ position: "relative" }}>
+        <div className="pb-4 mb-4 sm:pb-8 sm:mb-8 border-b-2 border-b-(--seco)/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center sm:gap-1">
               <img
@@ -70,9 +88,9 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex items-start justify-between flex-wrap gap-5">
+        <div className="flex items-start sm:justify-between justify-center flex-wrap gap-5">
           <div>
-            <span className="inline-block sm:text-2xl font-[dana-xb] mb-3 sm:mb-4">
+            <span className="inline-block sm:text-xl font-[dana-xb] mb-3 sm:mb-4 text-black/85">
               درباره پرشین بوکــ
             </span>
             <div>
@@ -108,14 +126,14 @@ function Footer() {
           <a href="https://trustseal.enamad.ir/?id=445206code=SgLtG6QTvIyffV2cjuiTe4sSPvMqsNSf">
             <img
               src="images/enamad.webp"
-              className="lg:w-52 sm:w-48 w-auto sm:px-0 px-12 object-cover"
+              className="lg:w-52 sm:w-48 w-42 sm:px-0 object-cover"
               alt=""
             />
           </a>
         </div>
-        <div className="flex text-(--seco)/80 sm:text-base text-sm items-center justify-center text-center sm:text-right sm:justify-between flex-wrap gap-y-2 gap-x-4 mt-8 sm:mt-10">
-          <span>کلیه حقوق مادی و معنوی سایت برای <span className="text-(--prim)">پرشین بوکــ</span> محفوظ است.</span>
-          <span>ساخته شده توصت پارسا فیضی</span>
+        <div className="flex text-(--seco)/80 sm:text-sm text-sm items-center justify-center text-center sm:text-right sm:justify-between flex-wrap gap-y-2 gap-x-4 mt-7 sm:mt-14">
+          <span>کلیه حقوق مادی و معنوی سایت برای <span className="text-(--prim) font-[dana-b]">پرشین بوکــ</span> محفوظ است.</span>
+          <span>ساخته شده توصت <span className="font-[dana-db]">پارسا فیضی</span></span>
         </div>
       </Container>
     </footer>

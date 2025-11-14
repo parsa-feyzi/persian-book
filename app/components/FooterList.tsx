@@ -9,7 +9,7 @@ interface I_Props {
 function FooterList({ title, listItems }: I_Props) {
   return (
     <div>
-      <span className="inline-block sm:text-xl font-[dana-xb] mb-3 sm:mb-4">
+      <span className="inline-block sm:text-xl font-[dana-xb] mb-3 sm:mb-4 text-black/85">
         {title}
       </span>
       <div className="flex flex-col sm:items-start items-center gap-y-3 sm:gap-y-4 ">

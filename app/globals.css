@@ -74,6 +74,11 @@ body {
   @apply translate-x-18
 }
 
+/*________________ footer list item _______________*/
+.footer_list_item:hover .footer_list_item_b_border {
+  @apply -right-3
+}
+
 /*________________ swiper _______________*/
  .swiper {
   @apply z-0!
@@ -142,7 +147,6 @@ body {
 .discountedProductBox:hover .discountedProductBox-showAndBuy {
  @apply opacity-100 flex translate-y-0 bottom-0
 }
-
 /* home swiper template */
 .home_swiper_template .swiper-button-next, .home_swiper_template .swiper-button-prev {
   @apply bg-white/85 border opacity-85 border-neutral-500/50 shadow-xl rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-13 sm:size-12 size-11 text-black/70 lg:translate-y-1 active:scale-95 z-10!

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
-function Container({children}: { children: React.ReactNode }) {
+interface I_Props { children: React.ReactNode; styles?: CSSProperties }
+
+function Container({children, styles}: I_Props) {
   return (
-    <div className='container md:px-[4vw] px-[6vw] mx-auto'>{children}</div>
+    <div style={styles} className='container md:px-[4vw] px-[6vw] mx-auto'>{children}</div>
   )
 }
 
