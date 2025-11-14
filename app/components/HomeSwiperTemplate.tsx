@@ -24,7 +24,7 @@ function HomeSwiperTemplate({ isAutoplay, children }: I_Props) {
             }}
             loop={true}
             breakpoints={{
-              460: {
+              440: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -43,7 +43,7 @@ function HomeSwiperTemplate({ isAutoplay, children }: I_Props) {
             }}
             navigation={true}
             modules={[Autoplay, Navigation]}
-            className="mySwiper w-full [460px]:px-0! px-8!"
+            className="mySwiper w-full [440px]:px-0! px-8!"
           >
             {children}
           </Swiper>
@@ -52,7 +52,7 @@ function HomeSwiperTemplate({ isAutoplay, children }: I_Props) {
             slidesPerView={1}
             spaceBetween={10}
             breakpoints={{
-              460: {
+              440: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
@@ -71,7 +71,7 @@ function HomeSwiperTemplate({ isAutoplay, children }: I_Props) {
             }}
             navigation={true}
             modules={[Navigation]}
-            className="mySwiper w-full [460px]:px-0! px-8!"
+            className="mySwiper w-full [440px]:px-0! px-8!"
           >
             {children}
           </Swiper>

@@ -16,7 +16,7 @@ import GeoIcon from "./icons/GeoIcon";
 
 function Footer() {
   return (
-    <footer className="mt-25 relative overflow-hidden sm:mt-32 bg-white pt-8 md:pt-16 pb-4">
+    <footer className="mt-16 relative overflow-hidden sm:mt-32 bg-white pt-8 md:pt-16 pb-4">
       <div className="absolute z-0 md:opacity-85 opacity-50 -top-24 -right-24">
         <div className="absolute top-8 right-8 size-32 bg-(--prim)/4 rounded-full"></div>
         <div className="absolute top-0 right-0 size-54 bg-(--prim)/3.5 rounded-full"></div>
@@ -65,7 +65,7 @@ function Footer() {
               />
             </div>
           </div>
-          <div className="flex flex-wrap sm:justify-start justify-center md:gap-x-12 gap-x-6 gap-y-6 sm:mt-12 mt-10">
+          <div className="flex flex-wrap sm:justify-start justify-evenly md:gap-x-12 gap-x-6 gap-y-6 sm:mt-12 mt-10">
             <div className="sm:block hidden">
               <InfoBox label="آدرس" infos="تهران، میدان انقلاب، خیابان کارگر شمالی، پـ ۴۵، طـ ۲" />
             </div>
@@ -79,7 +79,7 @@ function Footer() {
               }
             />
           </div>
-          <div className="md:text-base text-sm sm:hidden flex gap-1 mt-4">
+          <div className="md:text-base text-sm sm:hidden flex justify-center gap-1 mt-4">
             <div className="font-[dana-b] leading-4 text-(--seco) size-4">
               <GeoIcon />
             </div>

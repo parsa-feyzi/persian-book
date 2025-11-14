@@ -10,14 +10,19 @@ function CategoriesSwiperBox() {
     <section className="categoriesSwiper lg:mx-6 border-t-2 border-neutral-500/15 mt-6 mb-4 py-12">
       <Swiper
         slidesPerView={3}
+        spaceBetween={10}
         breakpoints={{
+          420: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
           640: {
             slidesPerView: 5,
             spaceBetween: 10,
           },
           768: {
             slidesPerView: 6,
-            // spaceBetween: 40,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 8,

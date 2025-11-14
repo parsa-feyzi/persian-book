@@ -13,7 +13,7 @@ function DiscountedProductsSwiper() {
       <div className="flex-col items-center justify-between py-5 lg:rounded-2xl bg-(--prim)/50 lg:px-0 px-4">
         <div className="lg:hidden mb-3 text-white flex items-center justify-between gap-2">
           <div className="sm:text-xl text-lg font-[dana-db]">پیشـنهاد شگـفت انگـیـز</div>
-          <div className="text-sm flex items-center gap-1">
+          <div className="sm:text-sm text-xs flex items-center gap-1">
             <div>همه کتاب‌ها</div>
             <div className="size-3 mb-0.5"><ArrowDownIcon styles={{ rotate: "90deg" }} /></div>
           </div>

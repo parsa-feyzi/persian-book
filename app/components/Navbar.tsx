@@ -8,7 +8,7 @@ import NavHamberMenu from "./NavHamberMenu";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-lg z-1!">
+    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-2xl z-1!">
       <Container>
         <div className="flex items-center justify-between">
           <NavHamberMenu />
@@ -44,15 +44,15 @@ function Navbar() {
             </div>
           </div>
           <div className="flex flex-row-reverse lg:gap-4 gap-3 items-center">
-            <Button className="md:grid hidden h-10 text-(--prim)">
+            <Button className="md:grid backdrop-blur-xl hidden h-10 text-(--prim)">
               <span className="px-3 text-sm">ورود | ثبت‌نام</span>
             </Button>
-            <Button className="size-10">
+            <Button className="size-10 backdrop-blur-xl">
               <div className="size-5">
                 <CartIcon />
               </div>
             </Button>
-            <Button className="md:grid hidden size-10">
+            <Button className="md:grid backdrop-blur-xl hidden size-10">
               <div className="size-5">
                 <SunIcon />
               </div>

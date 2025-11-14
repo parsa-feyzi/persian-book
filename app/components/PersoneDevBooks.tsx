@@ -4,13 +4,11 @@ import { SwiperSlide } from "swiper/react";
 import HomeSection from "./HomeSection";
 import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import ProductBox from "./ProductBox";
-import CirkelArrowIcon from "./icons/CirkelArrowIcon";
-import Link from "next/link";
 import SeeMore from "./SeeMore";
 
 function PersoneDevBooks() {
   return (
-    <HomeSection title="بهترین کتاب های توسعه فردی" href="/">
+    <HomeSection title="بهترین کتاب‌های توسعه فردی" href="/">
       <HomeSwiperTemplate>
         <SwiperSlide>
           <ProductBox />

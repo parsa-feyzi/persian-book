@@ -6,10 +6,7 @@ import HomeSection from "./HomeSection";
 function LatestProducts() {
   return (
     <HomeSection title="داغ ترین کتاب‌‌های" href="/">
-      <div
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(14rem, auto))" }}
-        className="grid lg:gap-8 gap-6"
-      >
+      <div className="grid grid_auto_fit lg:gap-8 sm:gap-6 gap-4">
         <ProductBox />
         <ProductBox />
         <ProductBox />

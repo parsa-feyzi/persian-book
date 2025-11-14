@@ -12,7 +12,14 @@ interface I_Props {
   color: string;
 }
 
-function LandingItem({ title, image, discount, shortDiscription, href, color }: I_Props) {
+function LandingItem({
+  title,
+  image,
+  discount,
+  shortDiscription,
+  href,
+  color,
+}: I_Props) {
   return (
     <div className="relative lg:h-[calc(100vh-10rem)] md:h-[calc(100vh-12rem)] flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
       <DiscountBox
@@ -21,7 +28,7 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
         styles="md:hidden block top-2 right-[75vw]"
       />
       <div className="md:mt-0 mt-6">
-        <div className="mb-4">
+        <div className="mb-1.5">
           <DiscountBox
             color={color}
             discount={discount}
@@ -29,7 +36,7 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
           />
         </div>
         <div>
-          <div className="lg:text-4xl text-2xl  xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
+          <div className="line-clamp-2 pt-2.5 lg:text-4xl text-2xl xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
             کتاب{" "}
             {
               <span
@@ -45,22 +52,24 @@ function LandingItem({ title, image, discount, shortDiscription, href, color }: 
             {shortDiscription}
           </div>
         </div>
-        <Button
-          style={{
-            backgroundColor: `color-mix(in oklab, ${color} 100%, transparent)`,
-          }}
-          className="md:translate-y-12 md:mt-0 mt-5 md:mx-0 mx-auto md:rounded-full rounded-lg md:duration-200 md:hover:-translate-x-2"
-        >
-          <Link
-            href={href}
-            className="flex items-center md:gap-2 gap-1 md:py-3 py-2 px-4 text-white"
+        <div>
+          <Button
+            style={{
+              backgroundColor: `color-mix(in oklab, ${color} 100%, transparent)`,
+            }}
+            className="md:mt-8 mt-5 md:mx-0 mx-auto md:rounded-full rounded-lg md:duration-200 md:hover:-translate-x-2"
           >
-            <div className="md:text-base text-sm">اطلاعات بیشتر</div>
-            <div className="md:size-6 size-5">
-              <ArrowIcon />
-            </div>
-          </Link>
-        </Button>
+            <Link
+              href={href}
+              className="flex items-center md:gap-2 gap-1 md:py-3 py-2 px-4 text-white"
+            >
+              <div className="md:text-base text-sm">اطلاعات بیشتر</div>
+              <div className="md:size-6 size-5">
+                <ArrowIcon />
+              </div>
+            </Link>
+          </Button>
+        </div>
       </div>
       <Link
         href={href}

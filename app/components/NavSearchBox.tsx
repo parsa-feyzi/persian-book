@@ -8,7 +8,7 @@ function NavSearchBox() {
   const [searchVal, setSearchVal] = useState("");
   return (
     <>
-      <div className="w-70 lg:flex hidden items-center p-1.5 rounded-full bg-(--seco)/3 h-10">
+      <div className="w-70 lg:flex hidden items-center p-1.5 rounded-full bg-(--seco)/3 backdrop-blur-xl h-10">
         <input
           type="text"
           placeholder="جستجو بین کتاب‌ها، نویسندگان، ژانرها..."
