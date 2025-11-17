@@ -5,13 +5,19 @@ const bookSchema = new mongoose.Schema({
     author: String,
     publisher: String,
     translator: String,
-    edition: String,
     description: String,
     image: String,
     price: Number,
     discount: Number,
     category: String,
-    weight: Number
+    details: {
+        weight: Number,
+        paper: String,
+        pageNumber: Number,
+        edition: String,
+        publishDate: String,
+        cover: String
+    }
 })
 
 export default mongoose.models.Book || mongoose.model("Book", bookSchema);

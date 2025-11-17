@@ -23,7 +23,7 @@ export default function LandingSwiper() {
         <SwiperSlide>
           <LandingItem
             title="عادت‌های اتمی"
-            href=""
+            href="/product/1"
             color="#cd4400"
             discount={20}
             image="Atomic-Habits.webp"
@@ -33,7 +33,7 @@ export default function LandingSwiper() {
         <SwiperSlide>
           <LandingItem
             title="مدیران بزرگ بدنیا نمی‌آیند ساخته میشوند"
-            href=""
+            href="/product/2"
             color="#0b9993"
             discount={15}
             image="مدیران-بزرگ-ورژن-2025.webp"
@@ -43,7 +43,7 @@ export default function LandingSwiper() {
         <SwiperSlide>
           <LandingItem
             title="مذاکره"
-            href=""
+            href="/product/3"
             color="#ff0050"
             discount={15}
             image="Negotiation-by-Max-Bazerman.jpg"

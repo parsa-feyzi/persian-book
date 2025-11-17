@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import MainLayout from "@/components/MainLayout";
 import "./globals.css";
-import MainLayout from "./components/MainLayout"
 // @ts-ignore
 import "swiper/css";
 // @ts-ignore

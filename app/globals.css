@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbfefd;
+  --background: #f9fbfa;
   --base: #ecfdf5;
   --foreground: #171717;
   --prim: #009966;
@@ -11,6 +11,11 @@
 @font-face {
   font-family: dana;
   src: url("/fonts/dana\ medium.ttf");
+}
+
+@font-face {
+  font-family: dana-l;
+  src: url("/fonts/dana\ regular.ttf");
 }
 
 @font-face {
@@ -60,9 +65,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1717174d;
+  background-color: #17171733;
   cursor: pointer;
-  @apply hover:bg-[#171717]/50!;
+  @apply hover:bg-[#171717]/35!;
 }
 
 /*________________ cart-button _______________*/
@@ -72,6 +77,15 @@ body {
 
 .cart-button:hover .cart-button-rail {
   @apply translate-x-18;
+}
+
+/*________________ product-cart-button _______________*/
+.product-cart-button-rail {
+  @apply sm:-translate-x-18.5 -translate-x-10 duration-300 translate-y-px;
+}
+
+.product-cart-button:hover .product-cart-button-rail {
+  @apply translate-x-30;
 }
 
 /*________________ footer list item _______________*/
@@ -90,6 +104,16 @@ body {
   .grid_auto_fit {
     grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
   }
+}
+
+/*________________ padding for navbar _______________*/
+.p-nav {
+  @apply md:pt-19.5 pt-16
+}
+
+/*________________ price _______________*/
+.price {
+  @apply font-[iransans] text-black/85 font-bold
 }
 
 /*________________ swiper _______________*/
