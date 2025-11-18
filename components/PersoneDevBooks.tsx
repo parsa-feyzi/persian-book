@@ -47,7 +47,7 @@ function PersoneDevBooks() {
           <ProductBox />
         </SwiperSlide>
         <SwiperSlide>
-          <SeeMore href="/" />
+          <SeeMore href="/" styles="h-[355px] bg-white" />
         </SwiperSlide>
       </HomeSwiperTemplate>
     </HomeSection>

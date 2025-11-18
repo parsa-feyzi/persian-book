@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import DiscountBox from "./DiscountBox";
 import DiscountedProductBox from "./DiscountedProductBox";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
+import SeeMore from "./SeeMore";
 
 function DiscountedProductsSwiper() {
   return (
@@ -161,6 +162,9 @@ function DiscountedProductsSwiper() {
               listLenght={11}
               discount={33}
             />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SeeMore href="/" styles="h-[237px] bg-white/85" />
           </SwiperSlide>
         </Swiper>
       </div>

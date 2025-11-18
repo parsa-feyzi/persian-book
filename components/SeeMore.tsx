@@ -1,11 +1,13 @@
 import Link from "next/link";
 import CirkelArrowIcon from "./icons/CirkelArrowIcon";
 
-function SeeMore({ href }: { href: string }) {
+interface I_Props { href: string, styles: string }
+
+function SeeMore({ href, styles }: I_Props) {
   return (
     <Link
       href={href}
-      className="h-[340px] rounded-e-2xl rounded-s bg-white grid place-content-center"
+      className={`${styles} rounded-e-2xl rounded-s grid place-content-center`}
     >
       <div className="flex flex-col items-center gap-4">
         <div className="size-14 text-(--prim)/69">

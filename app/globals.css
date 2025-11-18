@@ -61,7 +61,7 @@ body {
 /*  */
 ::-webkit-scrollbar {
   width: 0.5rem;
-  background-color: #61726b44;
+  background-color: #61726b24;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -114,6 +114,20 @@ body {
 /*________________ price _______________*/
 .price {
   @apply font-[iransans] text-black/85 font-bold
+}
+
+/*________________ button _______________*/
+.btn {
+  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-none
+}
+
+.btn-out {
+  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-2 
+}
+
+/*________________ swiper _______________*/
+.dot {
+  @apply size-1.5 bg-(--seco)/30 rounded-full mx-2
 }
 
 /*________________ swiper _______________*/
