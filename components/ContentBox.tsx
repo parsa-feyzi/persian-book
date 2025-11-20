@@ -4,11 +4,12 @@ interface I_Props {
   title: string;
   children: ReactNode;
   leftButton?: ReactNode;
+  htmlId?: string;
 }
 
-function ContentBox({ title, children, leftButton }: I_Props) {
+function ContentBox({ title, children, leftButton, htmlId }: I_Props) {
   return (
-    <div className="relative p-6 py-8 overflow-hidden rounded-xl mt-8 bg-white">
+    <div id={htmlId} className="relative p-6 py-8 overflow-hidden rounded-xl mt-8 bg-white">
       <div className="flex justify-between items-center mb-6">
         <div className="font-[dana-b] text-xl">{title}</div>
         <div>{leftButton}</div>

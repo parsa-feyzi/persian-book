@@ -1,5 +1,4 @@
-import { CSSProperties } from "react";
-
+import { T_Style } from "@/public/types/types";
 function ArrowDownIcon({ styles }: T_Style) {
   return (
     <svg

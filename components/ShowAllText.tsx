@@ -1,13 +1,25 @@
 "use client";
 import { ReactNode, useState } from "react";
 
-function ShowAllText({ children }: { children: ReactNode }) {
+interface I_Props {
+  children: string;
+  openStateButton: ReactNode;
+  closeStateButton: ReactNode;
+}
+
+function ShowAllText({ children, openStateButton, closeStateButton }: I_Props) {
   const [isShow, setIsShow] = useState(false);
 
   return (
     <div>
-      <div className={`${isShow ? "" : "line-clamp-3"}`}>{children}</div>
-      <div className="text-(--prim) text-sm cursor-pointer mt-2" onClick={() => setIsShow(!isShow)}>{isShow ? "مشاهده کمتر" : "مشاهده بیشتر"}</div>
+      <div className={`${ isShow ? "" : children.length >= 480 ? "line-clamp-3" : "" }`}>
+        {children}
+      </div>
+      {children.length >= 480 && (
+        <div onClick={() => setIsShow(!isShow)} className="mt-2">
+          {isShow ? openStateButton : closeStateButton}
+        </div>
+      )}
     </div>
   );
 }

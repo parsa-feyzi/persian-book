@@ -2,7 +2,7 @@
 
 :root {
   --background: #f9fbfa;
-  --base: #ecfdf5;
+  --base: #ecfaf1;
   --foreground: #171717;
   --prim: #009966;
   --seco: #61726b;
@@ -125,9 +125,14 @@ body {
   @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-2 
 }
 
-/*________________ swiper _______________*/
+/*________________ dot _______________*/
 .dot {
   @apply size-1.5 bg-(--seco)/30 rounded-full mx-2
+}
+
+/*________________ MuiRating _______________*/
+.MuiRating-iconEmpty {
+  @apply opacity-40
 }
 
 /*________________ swiper _______________*/
