@@ -1,14 +1,17 @@
 import Container from "@/components/Container";
 import Button from "@/components/designSystem/Button";
 import InfoBox from "./InfoBox";
-import PriceBox from "./PriceBox";
 import DetailsBox from "./DetailsBox";
 import ContentBox from "@/components/ContentBox";
-import ShowAllText from "@/components/ShowAllText";
-import OpinionBox from "@/components/OpinionBox";
-import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
+import OpinionBox from "@/components/CommentComponents/OpinionBox";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
+import SortingBox from "@/components/SortingBox";
+import QuestionBox from "@/components/CommentComponents/QuestionBox";
+import PaymentsBox from "@/components/PaymentsBox";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import AiSummaryOpinion from "./AiSummaryOpinion";
+import SimilarProducts from "./SimilarProducts";
 
 function Product() {
   return (
@@ -98,7 +101,15 @@ function Product() {
                 </div>
               </div>
             </div>
-            <ContentBox title="ویژگی‌ها">
+            <ContentBox
+              title="مشخصات"
+              leftButton={
+                <Button className="text-amber-600/70 flex! gap-1.5 items-center bg-white/0! hover:bg-white/0! me-1">
+                  <div className="text-sm mt-1">تضمین کیفیت کالا</div>
+                  <VerifiedIcon sx={{ fontSize: 32 }} />
+                </Button>
+              }
+            >
               <div className="grid grid-cols-6 gap-2 col-span-12">
                 <DetailsBox
                   title="سری چاپ"
@@ -173,59 +184,23 @@ function Product() {
                 </Button>
               }
             >
-              <div id="aiSummaryOpinion">
-                <div className="bg-linear-to-tl from-background to-fuchsia-50/70 p-4 rounded-xl mb-12">
-                  <div className="font-[dana-b] flex items-center gap-2 w-full pb-2 mb-2 border-b-2 border-(--seco)/10">
-                    <div className="size-10">
-                      <img
-                        className="size-full opacity-85 object-cover"
-                        src="/images/aiLogo.png"
-                        alt=""
-                      />
-                    </div>
-                    <div>
-                      خلاصه دیدگاه‌های کاربران
-                      <div className="font-[dana] text-[11px] text-(--seco) mt-2">
-                        تولید شده توصت هوش مصنوعی
-                      </div>
-                    </div>
+              <div>
+                <AiSummaryOpinion />
+                <div className="pt-4">
+                  <SortingBox
+                    itemsNumber={69}
+                    label="دیدگاه"
+                    tabs={[
+                      { title: "جدید ترین", href: "1", isActive: true },
+                      { title: "قدیمی ترین", href: "2" },
+                      { title: "مفید ترین", href: "3" },
+                    ]}
+                  />
+                  <div>
+                    <OpinionBox />
+                    <OpinionBox />
+                    <OpinionBox />
                   </div>
-                  <div className="leading-8 text-sm text-(--seco) px-2 pt-2">
-                    <ShowAllText
-                      openStateButton={
-                        <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
-                          مشاهده کمتر
-                          <div className="size-3">
-                            <ArrowDownIcon styles={{ rotate: "180deg" }} />
-                          </div>
-                        </div>
-                      }
-                      closeStateButton={
-                        <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
-                          مشاهده بیشتر
-                          <div className="size-3">
-                            <ArrowDownIcon />
-                          </div>
-                        </div>
-                      }
-                    >
-                      فروشگاه پرشین بوکــ با هدف ترویج کتاب‌ خوانی و دسترسی آسان
-                      به منابع متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین
-                      رمان‌ها، کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه
-                      کنید. ما تجربه خرید آسان، قیمت مناسب و ارسال سریع را برای
-                      دوست‌ داران کتاب فراهم کرده‌ایم. فروشگاه پرشین بوکــ با
-                      هدف ترویج کتاب‌ خوانی و دسترسی آسان به منابع متنوع ایجاد
-                      شده است. اینجا می‌توانید تازه‌ ترین رمان‌ها، کتاب‌های
-                      آموزشی و کودکانه را از ناشران معتبر تهیه کنید. ما تجربه
-                      خرید آسان، قیمت مناسب و ارسال سریع را برای دوست‌ داران
-                      کتاب فراهم کرده‌ایم.
-                    </ShowAllText>
-                  </div>
-                </div>
-                <div>
-                  <OpinionBox />
-                  <OpinionBox />
-                  <OpinionBox />
                 </div>
               </div>
             </ContentBox>
@@ -238,44 +213,29 @@ function Product() {
                 </Button>
               }
             >
-              <div></div>
+              <div className="mt-10">
+                <SortingBox
+                  itemsNumber={69}
+                  label="پرسش"
+                  tabs={[
+                    { title: "جدید ترین", href: "1", isActive: true },
+                    { title: "قدیمی ترین", href: "2" },
+                    { title: "بیشترین پاسخ", href: "3" },
+                  ]}
+                />
+                <div>
+                  <QuestionBox />
+                  <QuestionBox />
+                  <QuestionBox />
+                </div>
+              </div>
             </ContentBox>
           </div>
           <div className="col-span-3 relative pt-4">
-            <div className="sticky! top-28! flex flex-col justify-between borde border-(--seco)/10 bg-white rounded-xl p-5">
-              <div>
-                <PriceBox
-                  title="قیمت"
-                  value={(250000).toLocaleString()}
-                  isPrice
-                />
-                <PriceBox
-                  title="سود شما"
-                  value={(30000).toLocaleString()}
-                  isPrice
-                />
-                <PriceBox
-                  title="تخفیف"
-                  value={(20).toLocaleString()}
-                  isDiscount
-                />
-              </div>
-              <div className="mt-8">
-                <PriceBox
-                  title="موجودی کیف پول"
-                  value={(250000).toLocaleString()}
-                  isPrice
-                  size="sm"
-                />
-                <div className="mb-2"></div>
-                <Button className="w-full py-3 rounded-lg! text-white bg-(--prim)! hover:bg-(--prim)/90!">
-                  <div className="duration-300">افزودن به سبد خرید</div>
-                </Button>
-              </div>
-            </div>
+            <PaymentsBox />
           </div>
         </div>
-        <div></div>
+        <SimilarProducts />
       </Container>
     </div>
   );

@@ -10,8 +10,8 @@ function HomeSection({ href, title, children }: I_Props) {
       <div className="flex justify-between items-center gap-4 flex-wrap mb-8">
         <div className="relative">
           <div className="sm:text-[22px] text-lg font-[dana-xb]">{title} <span className="text-(--seco)">پـرشین بـوکـــ</span></div>
-          <div className="absolute top-1/2 -translate-y-1/2 -right-6 w-[calc(100%-100px)] h-7 bg-linear-to-l from-(--prim)/10 -z-1">
-              <div className="absolute top-0 -right-4 size-7 rotate-45 bg-background"></div>
+          <div className="absolute top-1/2 -translate-y-1/2 -right-7 w-[calc(100%-100px)] h-7.5 bg-linear-to-l from-(--prim)/8 -z-1">
+              <div className="absolute top-0 -right-4 size-7.5 rotate-45 bg-background"></div>
           </div>
         </div>
         <Link href={href} className="text-(--seco) sm:w-auto w-full justify-end hover:text-(--prim) flex items-center gap-0.5">

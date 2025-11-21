@@ -1,7 +1,8 @@
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import { Rating } from "@mui/material";
-import ShowAllText from "./ShowAllText";
-import ArrowDownIcon from "./icons/ArrowDownIcon";
+import ShowAllText from "../ShowAllText";
+import ArrowDownIcon from "../icons/ArrowDownIcon";
+import Thumbs from "./Thumbs";
 
 function OpinionBox() {
   return (
@@ -48,10 +49,7 @@ function OpinionBox() {
           openStateButton={<div className="hidden"></div>}
           closeStateButton={
             <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
-              ادامه
-              <div className="size-3 mb-0.5">
-                <ArrowDownIcon />
-              </div>
+              ادامه...
             </div>
           }
           >
@@ -78,26 +76,7 @@ function OpinionBox() {
             readOnly
           />
         </div>
-        <div className="flex gap-4 text-(--seco)/70">
-          <div className="flex items-center cursor-pointer">
-            <span className="price text-(--seco)/70! pe-1 text-sm! mt-0.5">
-              69
-            </span>
-            <ThumbDownOffAltOutlinedIcon
-              fontSize="small"
-              className="rotate-180"
-            />
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <span className="price text-(--seco)/70! pe-1 text-sm! mt-0.5">
-              0
-            </span>
-            <ThumbDownOffAltOutlinedIcon
-              fontSize="small"
-              className="rotate-y-180"
-            />
-          </div>
-        </div>
+        <Thumbs />
       </div>
     </article>
   );
