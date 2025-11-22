@@ -1,6 +1,5 @@
 'use client'
 
-import DiscountBox from "@/components/DiscountBox"
 import DiscountedProductBox from "@/components/DiscountedProductBox"
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon"
 import SeeMore from "@/components/SeeMore"
@@ -9,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 
 function SimilarProducts() {
   return (
-    <section className="discountedProductsSwiper relative overflow-hidden">
+    <section className="discountedProductsSwiper relative overflow-hidden mt-8">
       <div className="absolute -top-22 -left-10 text-[24rem] text-white/20 font-bold">%</div>
       <div className="flex-col items-center justify-between py-5 lg:rounded-2xl bg-emerald-800/5 lg:px-0 px-4">
         <div className="lg:hidden mb-3 text-white flex items-center justify-between gap-2">
@@ -70,7 +69,7 @@ function SimilarProducts() {
               image="Atomic-Habits.webp"
               index={0}
               listLenght={11}
-              discount={20}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -79,7 +78,7 @@ function SimilarProducts() {
               image="The-Advice-Trap.webp"
               index={1}
               listLenght={11}
-              discount={33}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -88,7 +87,7 @@ function SimilarProducts() {
               image="Slow-Productivity.jpg"
               index={2}
               listLenght={11}
-              discount={40}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -106,7 +105,7 @@ function SimilarProducts() {
               image="Hidden-Potential.webp"
               index={4}
               listLenght={11}
-              discount={20}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -124,7 +123,7 @@ function SimilarProducts() {
               image="Deep-Work.webp"
               index={6}
               listLenght={11}
-              discount={20}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -133,7 +132,7 @@ function SimilarProducts() {
               image="Build.webp"
               index={7}
               listLenght={11}
-              discount={10}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -142,7 +141,7 @@ function SimilarProducts() {
               image="Slow-Productivity.jpg"
               index={8}
               listLenght={11}
-              discount={5}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -151,7 +150,7 @@ function SimilarProducts() {
               image="Atomic-Habits.webp"
               index={9}
               listLenght={11}
-              discount={20}
+              discount={0}
             />
           </SwiperSlide>
           <SwiperSlide>
