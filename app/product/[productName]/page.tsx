@@ -11,7 +11,7 @@ import QuestionBox from "@/components/CommentComponents/QuestionBox";
 import PaymentsBox from "@/components/PaymentsBox";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import AiSummaryOpinion from "./AiSummaryOpinion";
-import SimilarProducts from "./SimilarProducts";
+import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
 
 function Product() {
   return (
@@ -19,21 +19,21 @@ function Product() {
       <Container>
         <div className="h-12 bg-white/80 rounded-2xl my-8"></div>
         <div className="grid grid-cols-12">
-          <div className="col-span-9 me-10">
-            <div className="grid grid-cols-12 mb-16">
-              <div className="col-span-4 flex justify-center">
+          <div className="lg:col-span-9 col-span-12 xl:me-10 lg:me-6 me-0">
+            <div className="grid grid-cols-12 xl:mb-16 mb-14 xl:gap-x-0 gap">
+              <div className="xl:col-span-4 lg:col-span-3 col-span-12 flex justify-center">
                 <img
-                  className="h-80 w-auto my-auto object-cover rounded-2xl shadow-xl/1"
+                  className="xl:h-80 h-60  w-auto my-auto object-cover rounded-2xl shadow-xl/1"
                   src="/images/Atomic-Habits.webp"
                   alt=""
                 />
               </div>
-              <div className="col-span-8 flex flex-col justify-between gap-4 py-2">
+              <div className="xl:col-span-8 lg:col-span-9 col-span-12 xl:ms-0 lg:ms-6 ms-0 flex flex-col justify-between gap-4 py-2">
                 <div>
-                  <div className="text-3xl font-[dana-xb] mt-2">
+                  <div className="xl:text-3xl text-[28px] font-[dana-xb] mt-2">
                     عادت‌های اتمی
                   </div>
-                  <div className="flex items-center gap-2 mt-6">
+                  <div className="flex items-center gap-2 xl:mt-6 mt-4">
                     <div className="flex items-center">
                       <div className="text-amber-300">
                         <StarRateRoundedIcon fontSize="small" />
@@ -84,14 +84,14 @@ function Product() {
                       </Button>
                     </a>
                   </div>
-                  <p className="max-w-[40vw] text-[15px] ps-2 leading-8 line-clamp-3 text-(--seco) mt-8">
+                  <p className="max-w-[40vw] text-[15px] ps-2 leading-8 line-clamp-3 text-(--seco) xl:mt-8 mt-6">
                     فروشگاه کتاب ما با هدف ترویج کتاب‌ خوانی و دسترسی آسان به
                     منابع متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین
                     رمان‌ها، کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه
                     کنید. ما تجربه خرید آسان، قیمت مناسب و ارسال سریع را برای
                     دوست‌ داران کتاب فراهم کرده‌ایم.
                   </p>
-                  <div className="mt-10 px-8 flex justify-evenly">
+                  <div className="xl:mt-10 mt-8 px-8 flex justify-evenly">
                     <InfoBox title="نویسنده" value="جیمز کلیر" />
                     <div className="w-0.5 bg-(--seco)/15"></div>
                     <InfoBox title="مترجم" value="هادی بهمنی" className="" />
@@ -231,11 +231,13 @@ function Product() {
               </div>
             </ContentBox>
           </div>
-          <div className="col-span-3 relative pt-4">
+          <div className="lg:block hidden col-span-3 relative pt-4">
             <PaymentsBox />
           </div>
         </div>
-        <SimilarProducts />
+        <div className="mt-10">
+          <SecoProductsBoxSwiper title={<span className="mb-8 relative after:w-[calc(100%-3rem)] after:h-[3px] after:rounded-full after:bg-(--prim) after:absolute after:-bottom-1 after:right-0">کتاب‌های مشابه</span>} maxSlide={6} bgColor="#014121" textColor="#000101" bgOpacity={5} />
+        </div>
       </Container>
     </div>
   );

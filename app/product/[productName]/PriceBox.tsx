@@ -21,11 +21,11 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
         ${isDiscount ? "text-red-700!" : ""}    
         ${
           size === "lg"
-            ? "text-lg"
+            ? "xl:text-lg text-[17px]"
             : size === "md"
-            ? "text-base"
+            ? "xl:text-base text-[15px]"
             : size === "sm"
-            ? "text-sm"
+            ? "xl:text-sm text-[13px]"
             : ""
         } text-(--seco)`}
       >
