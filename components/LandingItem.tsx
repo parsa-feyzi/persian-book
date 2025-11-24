@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./designSystem/Button";
 import DiscountBox from "./DiscountBox";
 import ArrowIcon from "./icons/ArrowIcon";
@@ -75,10 +76,14 @@ function LandingItem({
         href={href}
         className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14"
       >
-        <img
-          className="lg:h-80 lg:min-w-58 md:h-72 md:min-w-50 h-56 shadow-xl shadow-black/5 object-cover rounded-lg"
-          src={`/images/${image}`}
-        />
+        <div className="relative lg:h-80 lg:min-w-58 md:h-72 md:min-w-50 h-56">
+          <Image
+            fill
+            className="shadow-xl shadow-black/5 object-cover rounded-xl"
+            src={`/images/${image}`}
+            alt={""}
+          />
+        </div>
         <div
           style={{
             borderColor: `color-mix(in oklab, ${color} 40%, transparent)`,

@@ -7,12 +7,7 @@ import WhatsappIcon from "./icons/WhatsappIcon";
 import InfoBox from "./InfoBox";
 import FooterList from "./FooterList";
 import GeoIcon from "./icons/GeoIcon";
-
-// <footer className="pt-16 pb-8 bg-(--prim)/4 mt-24">
-//   <Container>
-//
-//   </Container>
-// </footer>
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -39,10 +34,13 @@ function Footer() {
         <div className="pb-4 mb-4 sm:pb-8 sm:mb-8 border-b-2 border-b-(--seco)/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center sm:gap-1">
-              <img
-                className="lg:size-14 sm:size-11 size-9 opacity-100"
-                src="/images/logo.png"
-              />
+              <div className="relative lg:size-14 sm:size-11 size-9">
+                <Image
+                  fill
+                  src="/images/logo.png"
+                  alt={""}
+                />
+              </div>
               <h1 className="lg:text-3xl sm:text-2xl text-xl mt-3">
                 <div className="font-[dana-b] sm:leading-4 leading-2">
                   پرشین
@@ -67,7 +65,10 @@ function Footer() {
           </div>
           <div className="flex flex-wrap sm:justify-start justify-evenly md:gap-x-12 gap-x-6 gap-y-6 sm:mt-12 mt-10">
             <div className="sm:block hidden">
-              <InfoBox label="آدرس" infos="تهران، میدان انقلاب، خیابان کارگر شمالی، پـ ۴۵، طـ ۲" />
+              <InfoBox
+                label="آدرس"
+                infos="تهران، میدان انقلاب، خیابان کارگر شمالی، پـ ۴۵، طـ ۲"
+              />
             </div>
             <InfoBox label="ایمیل" infos="persian_book@gmail.com" />
             <InfoBox
@@ -95,11 +96,11 @@ function Footer() {
             </span>
             <div>
               <p className="max-w-100 text-dark text-(--seco) leading-7 sm:text-base text-sm">
-                فروشگاه پرشین بوکــ با هدف ترویج کتاب‌ خوانی و دسترسی آسان به منابع
-                متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین رمان‌ها، کتاب‌های
-                آموزشی و کودکانه را از ناشران معتبر تهیه کنید. ما تجربه خرید
-                آسان، قیمت مناسب و ارسال سریع را برای دوست‌ داران کتاب فراهم
-                کرده‌ایم.
+                فروشگاه پرشین بوکــ با هدف ترویج کتاب‌ خوانی و دسترسی آسان به
+                منابع متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین رمان‌ها،
+                کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه کنید. ما تجربه
+                خرید آسان، قیمت مناسب و ارسال سریع را برای دوست‌ داران کتاب
+                فراهم کرده‌ایم.
               </p>
             </div>
             <p></p>
@@ -123,17 +124,26 @@ function Footer() {
               ]}
             />
           </div>
-          <a href="https://trustseal.enamad.ir/?id=445206code=SgLtG6QTvIyffV2cjuiTe4sSPvMqsNSf">
-            <img
-              src="images/enamad.webp"
-              className="lg:w-52 sm:w-48 w-42 sm:px-0 object-cover"
-              alt=""
-            />
-          </a>
+          <Link href="https://trustseal.enamad.ir/?id=445206code=SgLtG6QTvIyffV2cjuiTe4sSPvMqsNSf">
+            <div className="relative lg:w-52! sm:w-48 w-42">
+              <Image
+                fill
+                src="/images/enamad.png"
+                className="sm:px-0 object-cover"
+                alt=""
+              />
+            </div>
+          </Link>
         </div>
-        <div className="flex text-(--seco)/80 sm:text-sm text-sm items-center justify-center text-center sm:text-right sm:justify-between flex-wrap gap-y-2 gap-x-4 mt-7 sm:mt-14">
-          <span>کلیه حقوق مادی و معنوی سایت برای <span className="text-(--prim) font-[dana-b]">پرشین بوکــ</span> محفوظ است.</span>
-          <span>ساخته شده توصت <span className="font-[dana-db]">پارسا فیضی</span></span>
+        <div className="flex text-(--seco)/80 sm:text-sm text-sm items-center justify-center text-center sm:text-right sm:justify-between flex-wrap gap-y-2 gap-x-4 mt-10 sm:mt-20">
+          <span>
+            کلیه حقوق مادی و معنوی سایت برای{" "}
+            <span className="text-(--prim) font-[dana-b]">پرشین بوکــ</span>{" "}
+            محفوظ است.
+          </span>
+          <span>
+            ساخته شده توصت <span className="font-[dana-db]">پارسا فیضی</span>
+          </span>
         </div>
       </Container>
     </footer>

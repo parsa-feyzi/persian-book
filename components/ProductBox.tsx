@@ -6,7 +6,7 @@ function ProductBox() {
   return (
     <div className="bg-white rounded-xl shadow-xl/3 overflow-hidden">
       <div className="bg-(--prim)/5">
-        <Link href={"/product/1"} className="py-4 w-fit mx-auto block"><img className="max-h-44 sm:h-auto h-34 shadow-lg/5 object-cover rounded-xl" src="/images/Atomic-Habits.webp" alt="" /></Link>
+        <Link href={"/product/1"} className="py-4 w-fit mx-auto block"><img className="max-h-44 sm:h-auto h-34 shadow-lg/5 object-cover rounded-xl" src="/images/Atomic-Habits.webp" alt={""} /></Link>
       </div>
       <div className="sm:p-4 p-2 pt-2 pb-2">
         <Link href={"/product/1"} className="font-[dana-b] block sm:text-lg">عادت های اتمی</Link>

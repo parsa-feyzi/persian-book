@@ -1,17 +1,18 @@
 import ShowAllText from "../ShowAllText";
 import Thumbs from "./Thumbs";
+import Image from "next/image";
 
 function AnswerQuestionBox() {
   return (
     <article className="lg:mt-0 pt-1 pb-3">
       <div>
         <div className="flex items-center gap-3 mb-1">
-          <div className="size-8 rounded-full shrink-0 mt-1 grow-0">
-            <img
-              className="size-full inline-block"
-              src="https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+          <div className="size-8 relative rounded-full shrink-0 mt-1 grow-0">
+            <Image
+              fill
+              className="inline-block"
+              src="/images/personeImage.png"
               alt=""
-              title=""
               style={{ objectFit: "cover", borderRadius: "20px" }}
             />
           </div>

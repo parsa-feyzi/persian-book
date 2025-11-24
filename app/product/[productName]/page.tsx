@@ -12,6 +12,7 @@ import PaymentsBox from "@/components/PaymentsBox";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import AiSummaryOpinion from "./AiSummaryOpinion";
 import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
+import Image from "next/image";
 
 function Product() {
   return (
@@ -23,7 +24,7 @@ function Product() {
             <div className="grid grid-cols-12 xl:mb-16 mb-14 xl:gap-x-0 gap">
               <div className="xl:col-span-4 lg:col-span-3 col-span-12 flex justify-center">
                 <img
-                  className="xl:h-80 h-60  w-auto my-auto object-cover rounded-2xl shadow-xl/1"
+                  className="my-auto xl:h-80 h-60 lg:relative fixed w-auto object-cover rounded-2xl shadow-xl/1"
                   src="/images/Atomic-Habits.webp"
                   alt=""
                 />
@@ -51,9 +52,10 @@ function Product() {
                     </div>
                     <a href="#opinion">
                       <Button className="flex! items-center text-[13px] font-[dana-db] pb-0.5 pt-1 px-3 bg-linear-to-l from-fuchsia-50 to-white hover:bg-white/70 text-(--seco)">
-                        <span className="size-5 mb-0.5 me-0.5">
-                          <img
-                            className="size-full opacity-50 object-cover"
+                        <span className="size-5 relative mb-0.5 me-0.5">
+                          <Image
+                            fill
+                            className="opacity-50 object-cover"
                             src="/images/aiLogo.png"
                             alt=""
                           />
@@ -236,7 +238,17 @@ function Product() {
           </div>
         </div>
         <div className="mt-10">
-          <SecoProductsBoxSwiper title={<span className="mb-8 relative after:w-[calc(100%-3rem)] after:h-[3px] after:rounded-full after:bg-(--prim) after:absolute after:-bottom-1 after:right-0">کتاب‌های مشابه</span>} maxSlide={6} bgColor="#014121" textColor="#000101" bgOpacity={5} />
+          <SecoProductsBoxSwiper
+            title={
+              <span className="mb-8 relative after:w-[calc(100%-3rem)] after:h-[3px] after:rounded-full after:bg-(--prim) after:absolute after:-bottom-1 after:right-0">
+                کتاب‌های مشابه
+              </span>
+            }
+            maxSlide={6}
+            bgColor="#014121"
+            textColor="#000101"
+            bgOpacity={5}
+          />
         </div>
       </Container>
     </div>

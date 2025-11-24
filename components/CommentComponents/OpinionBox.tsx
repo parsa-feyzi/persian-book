@@ -1,7 +1,7 @@
-import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
+import Image from "next/image";
 import { Rating } from "@mui/material";
 import ShowAllText from "../ShowAllText";
-import ArrowDownIcon from "../icons/ArrowDownIcon";
+
 import Thumbs from "./Thumbs";
 
 function OpinionBox() {
@@ -10,12 +10,12 @@ function OpinionBox() {
       <div>
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
-            <div className="size-10 rounded-full shrink-0 mt-1 grow-0">
-              <img
-                className="size-full inline-block"
-                src="https://dkstatics-public.digikala.com/digikala-content-x-profile/730b1da13c1ab319e28246314a4e9ab67267826b_1737805761.png?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80"
+            <div className="size-10 relative rounded-full shrink-0 mt-1 grow-0">
+              <Image
+                fill
+                className="inline-block"
+                src="/images/personeImage.png"
                 alt=""
-                title=""
                 style={{ objectFit: "cover", borderRadius: "20px" }}
               />
             </div>
@@ -45,25 +45,26 @@ function OpinionBox() {
           </div>
         </div>
         <div className="text-sm px-2 leading-7">
-          <ShowAllText 
-          openStateButton={<div className="hidden"></div>}
-          closeStateButton={
-            <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
-              ادامه...
-            </div>
-          }
+          <ShowAllText
+            openStateButton={<div className="hidden"></div>}
+            closeStateButton={
+              <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
+                ادامه...
+              </div>
+            }
           >
-            این کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این کتاب
-            رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه کردم خیلی
-            ارزشمنده که میشه همه این مطالب رو در یک کتاب پیدا کرد فقط باید با فکری
-            باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان خیلی کوتاهه که بخواد
-            خودش تک تک به این نکات برسه پس صد برابر بهتر که این کتاب رو بخونه و
-            بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و بار ها خونده بشن تا
-            ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم گیر کردیم میتونیم .
-            باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان خیلی کوتاهه که بخواد
-            خودش تک تک به این نکات برسه پس صد برابر بهتر که این کتاب رو بخونه و
-            بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و بار ها خونده بشن تا
-            ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم گیر کردیم میتونیم .
+            این کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این
+            کتاب رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه کردم
+            خیلی ارزشمنده که میشه همه این مطالب رو در یک کتاب پیدا کرد فقط باید
+            با فکری باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان خیلی کوتاهه
+            که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که این کتاب رو
+            بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و بار ها
+            خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم گیر
+            کردیم میتونیم . باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان
+            خیلی کوتاهه که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که
+            این کتاب رو بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و
+            بار ها خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم
+            گیر کردیم میتونیم .
           </ShowAllText>
         </div>
       </div>

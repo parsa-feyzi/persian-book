@@ -5,6 +5,7 @@ import Button from "./designSystem/Button";
 import SunIcon from "./icons/SunIcon";
 import NavSearchBox from "./NavSearchBox";
 import NavHamberMenu from "./NavHamberMenu";
+import Image from "next/image";
 
 function Navbar() {
   return (
@@ -13,8 +14,8 @@ function Navbar() {
         <div className="flex items-center justify-between">
           <NavHamberMenu />
           <div className="flex items-center lg:gap-10 gap-8">
-            <Link href={"/"}>
-              <img className="lg:size-9 size-8" src="/images/logo.png"></img>
+            <Link href={"/"} className="relative lg:size-9 size-8">
+              <Image fill src="/images/logo.png" alt={""} />
             </Link>
             <div className="md:flex hidden text-lg item-center lg:gap-6 gap-4">
               <Link
