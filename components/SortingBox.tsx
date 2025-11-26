@@ -1,4 +1,4 @@
-import { I_SortingTab } from "@/public/types/types";
+import { I_SortingTab } from "@/types/types";
 import SwapVertRoundedIcon from "@mui/icons-material/SwapVertRounded";
 
 interface I_Props {
@@ -9,8 +9,8 @@ interface I_Props {
 
 function SortingBox({ tabs, itemsNumber, label }: I_Props) {
   return (
-    <div className="flex items-center justify-between mb-4 bg-white">
-      <div className="flex items-center gap-4">
+    <div className="flex items-center justify-between md:mb-4 mb-2 bg-white">
+      <div className="md:flex hidden items-center gap-4">
         <div className="flex items-center gap-1 text-black/70">
           <div>
             <SwapVertRoundedIcon />
@@ -18,10 +18,27 @@ function SortingBox({ tabs, itemsNumber, label }: I_Props) {
           <div>مرتب سازی:</div>
         </div>
         <div className="flex gap-4 items-center text-sm">
-            {tabs.map(tab => <div key={tab.href} className={`${tab.isActive ? "text-(--prim)" : "text-(--seco)/70"} cursor-pointer active:scale-95`}>{tab.title}</div>)}
+          {tabs.map((tab) => (
+            <div
+              key={tab.href}
+              className={`${
+                tab.isActive ? "text-(--prim)" : "text-(--seco)/70"
+              } cursor-pointer active:scale-95`}
+            >
+              {tab.title}
+            </div>
+          ))}
         </div>
       </div>
-      <div className="text-(--seco)/70 font-[dana-db] text-sm">
+      <div className="md:hidden block active:scale-95 cursor-pointer">
+        <div className="flex items-center gap-1 text-black/70">
+          <div>
+            <SwapVertRoundedIcon sx={{ fontSize: 20 }} />
+          </div>
+          <div className="text-sm">{tabs[tabs.findIndex(item => item.isActive)].title}</div>
+        </div>
+      </div>
+      <div className="text-(--seco)/70 font-[dana-db] lg:text-sm text-xs">
         <span className="price pe-1 text-(--seco)/70!">{itemsNumber}</span>
         {label}
       </div>

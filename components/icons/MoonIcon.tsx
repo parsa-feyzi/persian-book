@@ -1,4 +1,4 @@
-import { T_Style } from "@/public/types/types";
+import { T_Style } from "@/types/types";
 
 function MoonIcon({ styles }: T_Style) {
   return (

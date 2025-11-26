@@ -1,4 +1,4 @@
-import { T_Size } from "@/public/types/types";
+import { T_Size } from "@/types/types";
 import { CSSProperties } from "react";
 
 interface I_Props {

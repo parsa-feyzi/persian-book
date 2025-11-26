@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fbfa;
-  --base: #ecfaf1;
+  --background: #fafcfb;
+  --base: #f2f6f4;
   --foreground: #171717;
   --prim: #009966;
   --seco: #61726b;
@@ -116,13 +116,18 @@ body {
   @apply font-[iransans] text-black/85 font-bold
 }
 
+/*________________ discount _______________*/
+.discount {
+  @apply font-[iransans] text-black/45 font-bold line-through text-[15px]
+}
+
 /*________________ button _______________*/
 .btn {
-  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-none
+  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-none active:scale-95
 }
 
 .btn-out {
-  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-2 
+  @apply flex items-center justify-center font-[dana-db] gap-1.5 cursor-pointer rounded-lg sm:px-4 px-3 sm:py-2 py-1.5 outline-none border-2 active:scale-95
 }
 
 /*________________ dot _______________*/
@@ -170,19 +175,23 @@ body {
 /* discounted products swiper */
 .secoProductsBoxSwiper .swiper-button-next,
 .secoProductsBoxSwiper .swiper-button-prev {
-  @apply bg-white/85 border border-neutral-500/50 shadow rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-12 sm:size-10 size-9 text-black lg:translate-y-1 active:scale-95;
+  @apply lg:block hidden bg-white/85 border border-neutral-500/50 shadow rounded-full lg:p-3.5 sm:p-2.5 p-2 lg:size-12 sm:size-10 size-9 text-black lg:translate-y-1 active:scale-95;
 }
 
 .secoProductsBoxSwiper .swiper {
   @apply lg:pe-[4vw] sm:pe-[8vw] pe-[10vw];
 }
-/* discounted products box */
+/* seco products box */
+.SecoProductBox {
+  @apply bg-black/0 hover:bg-black
+}
+
 .SecoProductBox-image {
   @apply duration-100!;
 }
 
 .SecoProductBox-showAndBuy {
-  @apply opacity-0 -bottom-6 duration-200!;
+  @apply opacity-0 -bottom-6 duration-250!;
 }
 
 .SecoProductBox:hover .SecoProductBox-image {
@@ -192,6 +201,7 @@ body {
 .SecoProductBox:hover .SecoProductBox-showAndBuy {
   @apply opacity-100 flex translate-y-0 bottom-0;
 }
+
 /* home swiper template */
 .home_swiper_template .swiper-button-next,
 .home_swiper_template .swiper-button-prev {

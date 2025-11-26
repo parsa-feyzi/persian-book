@@ -13,14 +13,7 @@ interface I_Props {
   color: string;
 }
 
-function LandingItem({
-  title,
-  image,
-  discount,
-  shortDiscription,
-  href,
-  color,
-}: I_Props) {
+function LandingItem({ title, image, discount, shortDiscription, href, color }: I_Props) {
   return (
     <div className="relative lg:h-[calc(100vh-10rem)] md:h-[calc(100vh-12rem)] flex md:flex-row flex-col-reverse items-center xl:px-32 lg:px-28 md:px-18 px-10 md:justify-between justify-end md:mt-0 mt-2">
       <DiscountBox
@@ -28,7 +21,7 @@ function LandingItem({
         discount={discount}
         styles="md:hidden block top-2 right-[75vw]"
       />
-      <div className="md:mt-0 mt-6">
+      <div className="md:mt-0 mt-4">
         <div className="mb-1.5">
           <DiscountBox
             color={color}
@@ -37,7 +30,7 @@ function LandingItem({
           />
         </div>
         <div>
-          <div className="line-clamp-2 pt-2.5 lg:text-4xl text-2xl xl:leading-16 lg:leading-14 md:leading-10 md:text-right text-center">
+          <div className="line-clamp-2 pt-2.5 lg:text-4xl text-2xl xl:leading-16 lg:leading-14 md:leading-10 leading-9 md:text-right text-center">
             کتاب{" "}
             {
               <span
@@ -49,7 +42,7 @@ function LandingItem({
             }{" "}
             منتشر شد
           </div>
-          <div className="lg:text-lg md:text-base text-sm md:mt-2 mt-1 md:text-right text-center text-neutral-700">
+          <div className="lg:text-lg md:text-base text-sm mt-2 md:text-right text-center text-neutral-700">
             {shortDiscription}
           </div>
         </div>
@@ -77,9 +70,8 @@ function LandingItem({
         className="relative block lg:ms-24 md:ms-18 md:mt-0 mt-14"
       >
         <div className="relative lg:h-80 lg:min-w-58 md:h-72 md:min-w-50 h-56">
-          <Image
-            fill
-            className="shadow-xl shadow-black/5 object-cover rounded-xl"
+          <img
+            className="shadow-xl shadow-black/5 object-cover rounded-xl size-full"
             src={`/images/${image}`}
             alt={""}
           />

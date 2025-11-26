@@ -7,49 +7,65 @@ import { Navigation } from "swiper/modules";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
 import SeeMore from "./SeeMore";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 interface I_Props {
   maxSlide: number;
   isFull?: boolean;
   title: ReactNode;
+  linkToAll?: string;
   bgColor: string;
   textColor?: string;
   bgOpacity?: number;
   maxDiscount?: number;
 }
 
-function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#fff", bgOpacity = 100, maxDiscount = 0 }: I_Props) {
+function SecoProductsBoxSwiper({ maxSlide, isFull, title, linkToAll, bgColor, textColor = "#fff", bgOpacity = 100, maxDiscount = 0 }: I_Props) {
   return (
-    <section className={`secoProductsBoxSwiper lg:px-4 relative overflow-hidden`}>
+    <section
+      className={`secoProductsBoxSwiper lg:px-4 relative overflow-hidden`}
+    >
       {maxDiscount !== 0 && (
         <div className="absolute -top-22 -left-10 text-[24rem] text-white/20 font-bold">
           %
         </div>
       )}
       <div
-        style={{ backgroundColor: `color-mix(in oklab, ${bgColor} ${bgOpacity}%, transparent)` }}
-        className={`${maxDiscount ? "lg:px-0 px-4" : "px-8"} flex-col items-center justify-between py-5 lg:rounded-2xl bg-amber-50/40`}
+        style={{
+          backgroundColor: `color-mix(in oklab, ${bgColor} ${bgOpacity}%, transparent)`,
+        }}
+        className={`${maxDiscount ? "lg:px-0 px-4" : "lg:px-8 px-4"} ${
+          isFull ? "lg:rounded-2xl" : "lg:rounded-2xl sm:rounded-xl rounded-lg"
+        } flex-col items-center justify-between lg:py-5 py-4 bg-amber-50/40`}
       >
-        <div style={{ color: textColor }} className={`${maxDiscount ? "lg:hidden mb-4" : "mb-6 mt-2"} flex items-center justify-between gap-2`}>
-          <div className="sm:text-xl text-lg font-[dana-db]">
-            {title}
-          </div>
-          <div className="sm:text-sm text-xs flex items-center gap-1">
-            <div>همه کتاب‌ها</div>
-            <div className="size-3 mb-0.5">
-              <ArrowDownIcon styles={{ rotate: "90deg" }} />
-            </div>
-          </div>
+        <div
+          style={{ color: textColor }}
+          className={`${
+            maxDiscount ? "lg:hidden mb-4" : "mb-6 mt-2"
+          } flex items-center justify-between gap-2`}
+        >
+          <div className="lg::text-xl sm:text-lg font-[dana-db]">{title}</div>
+          {linkToAll && (
+            <Link
+              href={linkToAll}
+              className="sm:text-sm opacity-69 active:scale-95 hover:opacity-100 text-xs flex items-center gap-1"
+            >
+              <div>همه کتاب‌ها</div>
+              <div className="size-3 mb-[3px]">
+                <ArrowDownIcon styles={{ rotate: "90deg" }} />
+              </div>
+            </Link>
+          )}
         </div>
         <Swiper
           slidesPerView={2}
           spaceBetween={10}
           breakpoints={{
             500: {
-              slidesPerView: Number(maxSlide.toFixed(0)) - 4,
+              slidesPerView: Number(maxSlide.toFixed(0)) - 3,
               spaceBetween: 10,
             },
-            640: {
+            768: {
               slidesPerView: Number(maxSlide.toFixed(0)) - 2,
               spaceBetween: 8,
             },
@@ -57,7 +73,7 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               slidesPerView: Number(maxSlide.toFixed(0)) - 1,
               spaceBetween: 9,
             },
-            1300: {
+            1280: {
               slidesPerView: Number(maxSlide.toFixed(0)),
               spaceBetween: 10,
             },
@@ -93,7 +109,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Atomic-Habits.webp"
               index={0}
-              listLenght={11}
               discount={20}
             />
           </SwiperSlide>
@@ -102,7 +117,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="The-Advice-Trap.webp"
               index={1}
-              listLenght={11}
               discount={33}
             />
           </SwiperSlide>
@@ -111,7 +125,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Slow-Productivity.jpg"
               index={2}
-              listLenght={11}
               discount={40}
             />
           </SwiperSlide>
@@ -120,7 +133,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Negotiation-by-Max-Bazerman.jpg"
               index={3}
-              listLenght={11}
               discount={20}
             />
           </SwiperSlide>
@@ -129,7 +141,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Hidden-Potential.webp"
               index={4}
-              listLenght={11}
               discount={20}
             />
           </SwiperSlide>
@@ -138,7 +149,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Factfulness.webp"
               index={5}
-              listLenght={11}
               discount={5}
             />
           </SwiperSlide>
@@ -147,7 +157,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Deep-Work.webp"
               index={6}
-              listLenght={11}
               discount={20}
             />
           </SwiperSlide>
@@ -156,7 +165,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Build.webp"
               index={7}
-              listLenght={11}
               discount={10}
             />
           </SwiperSlide>
@@ -165,7 +173,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Slow-Productivity.jpg"
               index={8}
-              listLenght={11}
               discount={5}
             />
           </SwiperSlide>
@@ -174,7 +181,6 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Atomic-Habits.webp"
               index={9}
-              listLenght={11}
               discount={20}
             />
           </SwiperSlide>
@@ -183,12 +189,19 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, bgColor, textColor="#f
               href="/"
               image="Negotiation-by-Max-Bazerman.jpg"
               index={10}
-              listLenght={11}
               discount={33}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SeeMore href="/" styles={`${isFull ? "h-[237px]" : "h-[221px]"} bg-white/85`} />
+            <SecoProductBox
+              href="/"
+              image="Slow-Productivity.jpg"
+              index={8}
+              discount={5}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SeeMore href="/" styles="bg-white/85" />
           </SwiperSlide>
         </Swiper>
       </div>

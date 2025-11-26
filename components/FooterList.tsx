@@ -1,4 +1,4 @@
-import { I_ListItem } from "@/public/types/types";
+import { I_ListItem } from "@/types/types";
 import FooterListItem from "./FooterListItem";
 
 interface I_Props {

@@ -1,4 +1,4 @@
-import PriceBox from "@/app/product/[productName]/PriceBox";
+import PriceBox from "@/app/product/[productName]/components/PriceBox";
 import Button from "./designSystem/Button";
 
 function PaymentsBox() {

@@ -3,52 +3,23 @@ import { Rating } from "@mui/material";
 import ShowAllText from "../ShowAllText";
 
 import Thumbs from "./Thumbs";
+import ProfileComment from "./ProfileComment";
 
 function OpinionBox() {
   return (
     <article className="lg:mt-0 py-3 border-t border-(--seco)/20">
       <div>
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-3">
-            <div className="size-10 relative rounded-full shrink-0 mt-1 grow-0">
-              <Image
-                fill
-                className="inline-block"
-                src="/images/personeImage.png"
-                alt=""
-                style={{ objectFit: "cover", borderRadius: "20px" }}
-              />
-            </div>
-            <div>
-              <div className="flex items-center">
-                <p className="text-sm font-[dana-b] text-black/70">
-                  پردیس افضل زاده
-                </p>
-                <div className="flex">
-                  <div className="dot"></div>
-                </div>
-                <div
-                  className="inline-flex items-center border-none pr-0 Badge_Badge__QIekq Badge_Badge--small__ElV6O px-2 text-caption-strong"
-                  style={{
-                    backgroundColor: "transparent",
-                    color: "var(--color-hint-text-success)",
-                    borderColor: "var(--color-hint-text-success)",
-                  }}
-                >
-                  <p className="inline-block text-xs text-(--prim)">خریدار</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="text-xs font-[iransans] font-bold text-(--seco)/70">
-            12 <span className="font-[dana-db]">آبان</span> 1404
+        <div className="flex justify-between items-center lg:mb-4 mb-2">
+          <ProfileComment name="ممد نیگر زاده" role="خریدار" />
+          <div className="lg:text-xs text-[11px] sm:block hidden font-[iransans] font-bold text-(--seco)/70">
+            12 <span className="font-[dana-b]! font-medium">آبان</span> 1404
           </div>
         </div>
-        <div className="text-sm px-2 leading-7">
+        <div className="lg:text-sm text-[13px] lg:px-2 px-1 lg:leading-7 text-black/75 leading-6.5">
           <ShowAllText
             openStateButton={<div className="hidden"></div>}
             closeStateButton={
-              <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
+              <div className="text-(--prim) lg:text-sm text-[13px] cursor-pointer flex items-center gap-1.5">
                 ادامه...
               </div>
             }
@@ -68,12 +39,21 @@ function OpinionBox() {
           </ShowAllText>
         </div>
       </div>
-      <div className="flex justify-between items-center mt-4">
-        <div>
+      <div className="flex justify-between items-end lg:mt-4 mt-2">
+        <div className="lg:block hidden translate-y-1.5">
           <Rating
             name="half-rating-read"
             defaultValue={4}
             precision={1}
+            readOnly
+          />
+        </div>
+        <div className="block lg:hidden translate-y-1.5">
+          <Rating
+            name="half-rating-read"
+            defaultValue={4}
+            precision={1}
+            size="small"
             readOnly
           />
         </div>

@@ -12,11 +12,11 @@ interface I_Props {
 
 function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
   return (
-    <>
+    <div className="z-20">
       <div
         className={`${
           isSidebarShow ? "translate-x-0" : "translate-x-64"
-        } transition-all duration-500 h-screen md:hidden block w-64 fixed z-20 bg-[#f5fdfa] top-0 right-0`}
+        } transition-all duration-500 h-screen md:hidden block w-64 fixed z-20 bg-background top-0 right-0`}
       >
         <div className="w-full flex items-center p-3 py-5 bg-(--seco)/3">
           <input
@@ -29,9 +29,18 @@ function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
           </div>
         </div>
         <div className="py-3">
-          <Link href="/" className="block py-3 px-6">صفحه اصلی</Link>
-          <Link href="/stor" className="block py-3 px-6 bg-linear-to-l from-(--seco)/3 to-(--seco)/1 text-(--prim)">فروشگاه</Link>
-          <Link href="/weblog" className="block py-3 px-6">وبلاگ</Link>
+          <Link href="/" className="block py-3 px-6">
+            صفحه اصلی
+          </Link>
+          <Link
+            href="/stor"
+            className="block py-3 px-6 bg-linear-to-l from-(--seco)/3 to-(--seco)/1 text-(--prim)"
+          >
+            فروشگاه
+          </Link>
+          <Link href="/weblog" className="block py-3 px-6">
+            وبلاگ
+          </Link>
           <div className="py-3 px-6 flex justify-between items-center">
             <div>ارتباط با ما</div>
             <div className="size-4 text-black/80">
@@ -55,7 +64,7 @@ function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
           isSidebarShow ? "block bg-black/40" : "hidden"
         } h-screen md:hidden block w-screen fixed z-10 top-0 right-0`}
       ></div>
-    </>
+    </div>
   );
 }
 

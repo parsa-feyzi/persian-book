@@ -13,7 +13,15 @@ export default async function Home() {
       <LandingSwiper />
       <div className="">
         <CategoriesSwiperBox />
-        <SecoProductsBoxSwiper title="پیشنهاد شگفت انگیز" maxSlide={7} isFull bgColor="var(--prim)" bgOpacity={50} maxDiscount={33} />
+        <SecoProductsBoxSwiper
+          title="پیشنهاد شگفت انگیز"
+          linkToAll="/"
+          maxSlide={7}
+          isFull
+          bgColor="var(--prim)"
+          bgOpacity={35}
+          maxDiscount={33}
+        />
         <Container>
           <LatestProducts />
           <BestsellerProducts />

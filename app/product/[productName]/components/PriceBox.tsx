@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { T_Size } from "@/public/types/types";
+import { T_Size } from "@/types/types";
 
 interface I_Props {
   title: string;

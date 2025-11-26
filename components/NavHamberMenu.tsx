@@ -9,7 +9,7 @@ function NavHamberMenu() {
   const [isSidebarShow, setIsSidebarShow] = useState(false);
 
   return (
-    <>
+    <div className="md:hidden block">
       <Button
         onClick={() => setIsSidebarShow(true)}
         className="md:hidden! grid! size-10"
@@ -19,7 +19,7 @@ function NavHamberMenu() {
         </div>
       </Button>
       <Sidebar isSidebarShow={isSidebarShow} setIsSidebarShow={setIsSidebarShow} />
-    </>
+    </div>
   );
 }
 

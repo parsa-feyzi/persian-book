@@ -12,7 +12,7 @@ function CategoriesSwiperBox() {
         slidesPerView={3}
         spaceBetween={10}
         breakpoints={{
-          420: {
+          480: {
             slidesPerView: 4,
             spaceBetween: 10,
           },

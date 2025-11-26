@@ -9,7 +9,7 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-2xl z-1!">
+    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-2xl z-2">
       <Container>
         <div className="flex items-center justify-between">
           <NavHamberMenu />

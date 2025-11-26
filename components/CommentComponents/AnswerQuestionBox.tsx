@@ -1,4 +1,5 @@
 import ShowAllText from "../ShowAllText";
+import ProfileComment from "./ProfileComment";
 import Thumbs from "./Thumbs";
 import Image from "next/image";
 
@@ -6,37 +7,7 @@ function AnswerQuestionBox() {
   return (
     <article className="lg:mt-0 pt-1 pb-3">
       <div>
-        <div className="flex items-center gap-3 mb-1">
-          <div className="size-8 relative rounded-full shrink-0 mt-1 grow-0">
-            <Image
-              fill
-              className="inline-block"
-              src="/images/personeImage.png"
-              alt=""
-              style={{ objectFit: "cover", borderRadius: "20px" }}
-            />
-          </div>
-          <div>
-            <div className="flex items-center">
-              <p className="text-xs font-[dana-db] text-black/70">
-                پردیس افضل زاده
-              </p>
-              <div className="flex">
-                <div className="dot"></div>
-              </div>
-              <div
-                className="inline-flex items-center border-none pr-0 Badge_Badge__QIekq Badge_Badge--small__ElV6O px-2 text-caption-strong"
-                style={{
-                  backgroundColor: "transparent",
-                  color: "var(--color-hint-text-success)",
-                  borderColor: "var(--color-hint-text-success)",
-                }}
-              >
-                <p className="inline-block text-xs text-(--prim)">خریدار</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProfileComment name="آقا خسرو" role="خریدار" size="sm" />
         <div className="text-sm px-10 leading-7 text-black/70">
           <ShowAllText
             openStateButton={<div className="hidden"></div>}
@@ -54,7 +25,7 @@ function AnswerQuestionBox() {
       </div>
       <div className="flex justify-between px-10 items-center mt-2">
         <div className="text-[13px] font-[iransans] font-bold text-(--seco)/70">
-          12 <span className="font-[dana-db]">آبان</span> 1404
+          12 <span className="font-[dana-b]! font-medium">آبان</span> 1404
         </div>
         <Thumbs />
       </div>
