@@ -16,7 +16,7 @@ function ShowAllText({ children, openStateButton, closeStateButton }: I_Props) {
         {children}
       </div>
       {children.length >= 480 && (
-        <div onClick={() => setIsShow(!isShow)} className="lg:mt-2 mt-0">
+        <div onClick={() => setIsShow(!isShow)} className="mt-2">
           {isShow ? openStateButton : closeStateButton}
         </div>
       )}

@@ -15,6 +15,12 @@ import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
 import Image from "next/image";
 import PaymentsBoxNav from "@/components/PaymentsBoxNav";
 import ShowAllContentShadow from "@/components/ShowAllContentShadow";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import Like from "@/components/Like";
+import Link from "next/link";
+import AllOpinionsModal from "@/components/CommentComponents/AllOpinionsModal";
+import OpinionsContainer from "./components/OpinionsContainer";
+import QuestionsContainer from "./components/QuestionsContainer";
 
 function Product() {
   return (
@@ -32,27 +38,65 @@ function Product() {
           <div className="grid grid-cols-12 lg:mt-12">
             <div className="lg:col-span-9 col-span-12 xl:me-10 lg:me-6 me-0">
               <div className="grid grid-cols-12 xl:mb-16 lg:mb-14 mb-8 xl:gap-x-0 gap">
-                <div className="xl:col-span-4 lg:col-span-3 hidden lg:flex justify-center">
-                  <img
-                    className="my-auto xl:h-80 h-60 relative w-auto object-cover rounded-2xl shadow-xl/1"
-                    src="/images/Atomic-Habits.webp"
-                    alt=""
-                  />
+                <div className="relative lg:col-span-4 lg:block hidden">
+                  <div className="lg:flex justify-center lg:bg-(--base)/50 lg:p-6 rounded-lg">
+                    <img
+                      className="my-auto xl:h-60 h-52 relative w-auto object-cover rounded-2xl shadow-xl/1"
+                      src="/images/Atomic-Habits.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div className="lg:flex hidden mt-3 items-center gap-2 text-black/70">
+                    <div className="active:scale-95 absolute right-2 top-4 cursor-pointer">
+                      <ShareOutlinedIcon
+                        sx={{ fontSize: 19 }}
+                        className="rotate-180"
+                      />
+                    </div>
+                    <div className="active:scale-95 absolute right-2 top-12">
+                      <Like />
+                    </div>
+                  </div>
                 </div>
-                <div className="xl:col-span-8 lg:col-span-9 col-span-12 xl:ms-0 lg:ms-6 ms-0 flex flex-col justify-between gap-4 py-2">
+                <div className="lg:col-span-8 col-span-12  lg:ms-6 ms-0 flex flex-col justify-between gap-4 py-2">
                   <div>
-                    <div className="xl:text-3xl lg:text-[28px] md:text-xl text-lg md:pe-16 pe-8 leading-7 lg:font-[dana-xb] mt-2">
-                      <span className="lg:block hidden">عادت‌های اتمی</span>
-                      <span className="lg:hidden block">
+                    <div className="flex justify-between items-center gap-6">
+                      <div className="text-xs line-clamp-1 text-black/50 ">
+                        <Link href={"/"} className="underline">
+                          توسعه فردی
+                        </Link>{" "}
+                        {">"}{" "}
+                        <Link href={"/"} className="underline">
+                          جیمز کلیر
+                        </Link>{" "}
+                        {">"}{" "}
+                        <Link href={"/"} className="underline">
+                          عادت‌های اتمی
+                        </Link>
+                      </div>
+                      <div className="lg:hidden flex items-center gap-5 text-black/70">
+                        <span className="active:scale-95 cursor-pointer">
+                          <ShareOutlinedIcon
+                            sx={{ fontSize: 19 }}
+                            className="rotate-180"
+                          />
+                        </span>
+                        <span className="active:scale-95">
+                          <Like />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="xl:text-2xl lg:text-xl sm:text-lg text-[17px] lg:pe-4 md:pe-16 pe-8 leading-7 mt-4">
+                      <span className="block">
                         کتاب{" "}
                         <span className="font-[dana-xb]">عادت‌های اتمی</span>{" "}
-                        اثر <span className="font-[dana-db]">جیمز کلیر</span>{" "}
-                        انشارات <span className="font-[dana-db]">نشر نوین</span>
+                        اثر <span className="font-[dana-b]">جیمز کلیر</span>{" "}
+                        انشارات <span className="font-[dana-b]">نشر نوین</span>
                       </span>
                     </div>
                     <div
                       style={{ scrollbarWidth: "none" }}
-                      className="flex whitespace-nowrap overflow-x-scroll! items-center gap-2 xl:mt-6 lg:mt-4 sm:mt-6 mt-4 w-full max-w-full overflow-auto"
+                      className="flex whitespace-nowrap overflow-x-scroll! items-center gap-2 xl:mt-7 lg:mt-5 sm:mt-6 mt-4 w-full max-w-full overflow-auto"
                     >
                       <div className="flex items-center">
                         <div className="text-amber-300">
@@ -117,7 +161,7 @@ function Product() {
                         </Button>
                       </a>
                     </div>
-                    <p className="max-w-[40vw] lg:-webkit-box hidden text-[15px] ps-2 leading-8 lg:line-clamp-3 text-(--seco) xl:mt-8 mt-6">
+                    <p className="max-w-[calc(100%-1rem)] lg:-webkit-box hidden text-[15px] ps-2 leading-8 lg:line-clamp-3 text-(--seco) xl:mt-8 mt-6">
                       فروشگاه کتاب ما با هدف ترویج کتاب‌ خوانی و دسترسی آسان به
                       منابع متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین
                       رمان‌ها، کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه
@@ -214,61 +258,16 @@ function Product() {
                   </div>
                 </ShowAllContentShadow>
               </ContentBox>
-              <ContentBox
-                htmlId="opinion"
-                title="دیدگاه‌ کاربرها"
-                leftButton={
-                  <Button className="lg:text-xs text-[11px] btn-out border-(--prim)! bg-(--prim)/0! hover:bg-(--prim)! hover:text-white! content-center text-(--prim)!">
-                    ثبت دیدگاه جدید
-                  </Button>
-                }
-              >
-                <div>
-                  <AiSummaryOpinion />
-                  <div className="pt-4">
-                    <SortingBox
-                      itemsNumber={69}
-                      label="دیدگاه"
-                      tabs={[
-                        { title: "جدید ترین", href: "1", isActive: true },
-                        { title: "قدیمی ترین", href: "2" },
-                        { title: "مفید ترین", href: "3" },
-                      ]}
-                    />
-                    <div>
-                      <OpinionBox />
-                      <OpinionBox />
-                      <OpinionBox />
-                    </div>
-                  </div>
-                </div>
-              </ContentBox>
-              <ContentBox
-                htmlId="question"
-                title="پرسش‌ و پاسخ"
-                leftButton={
-                  <Button className="text-xs font-[dana-db] btn-out border-(--prim)! bg-(--prim)/0! hover:bg-(--prim)! hover:text-white! content-center text-(--prim)!">
-                    ثبت پرسش جدید
-                  </Button>
-                }
-              >
-                <div className="mt-10">
-                  <SortingBox
-                    itemsNumber={69}
-                    label="پرسش"
-                    tabs={[
-                      { title: "جدید ترین", href: "1", isActive: true },
-                      { title: "قدیمی ترین", href: "2" },
-                      { title: "بیشترین پاسخ", href: "3" },
-                    ]}
-                  />
-                  <div>
-                    <QuestionBox />
-                    <QuestionBox />
-                    <QuestionBox />
-                  </div>
-                </div>
-              </ContentBox>
+              <OpinionsContainer>
+                <OpinionBox />
+                <OpinionBox />
+                <OpinionBox />
+              </OpinionsContainer>
+              <QuestionsContainer>
+                <QuestionBox />
+                <QuestionBox />
+                <QuestionBox />
+              </QuestionsContainer>
             </div>
             <div className="lg:block hidden col-span-3 relative pt-4">
               <PaymentsBox />
@@ -280,8 +279,22 @@ function Product() {
           <div className="mt-10">
             <SecoProductsBoxSwiper
               title={
-                <span className="mb-8 lg:text-2xl relative after:w-[calc(100%-3rem)] after:lg:h-[3px] after:h-0.5 after:rounded-full after:bg-(--prim) after:absolute after:-bottom-2 after:right-0">
+                <span className="mb-8 font-[dana-b] lg:text-xl sm:text-lg relative after:w-[calc(100%-2rem)] after:h-0.5 after:rounded-full after:bg-(--prim) after:absolute after:-bottom-2 after:right-0">
                   کتاب‌های مشابه
+                </span>
+              }
+              linkToAll="/"
+              maxSlide={6}
+              bgColor="#014121"
+              textColor="#000101"
+              bgOpacity={3}
+            />
+          </div>
+          <div className="mt-10">
+            <SecoProductsBoxSwiper
+              title={
+                <span className="mb-8 font-[dana-b] lg:text-xl sm:text-lg relative after:w-[calc(100%-2rem)] after:h-0.5 after:rounded-full after:bg-(--prim) after:absolute after:-bottom-2 after:right-0">
+                  پیشنهاد خرید
                 </span>
               }
               linkToAll="/"

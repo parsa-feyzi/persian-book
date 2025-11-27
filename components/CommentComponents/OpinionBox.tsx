@@ -1,42 +1,64 @@
-import Image from "next/image";
 import { Rating } from "@mui/material";
 import ShowAllText from "../ShowAllText";
 
 import Thumbs from "./Thumbs";
 import ProfileComment from "./ProfileComment";
+import OpinionBoxModalOpener from "./OpinionBoxModalOpener";
+import ArrowDownIcon from "../icons/ArrowDownIcon";
 
-function OpinionBox() {
+function OpinionBox({ isInModal }: { isInModal?: boolean }) {
   return (
-    <article className="lg:mt-0 py-3 border-t border-(--seco)/20">
+    <article className={`${isInModal ? "border-t-4 border-(--seco)/10" : "border-t border-(--seco)/20"} lg:mt-0 py-3`}>
       <div>
         <div className="flex justify-between items-center lg:mb-4 mb-2">
-          <ProfileComment name="ممد نیگر زاده" role="خریدار" />
-          <div className="lg:text-xs text-[11px] sm:block hidden font-[iransans] font-bold text-(--seco)/70">
+          <ProfileComment name="ممد نیگرزاده" role="خریدار" />
+          <div className="lg:text-xs sm:text-[11px] text-[10px] mt-1 font-[iransans] font-bold text-(--seco)/70">
             12 <span className="font-[dana-b]! font-medium">آبان</span> 1404
           </div>
         </div>
         <div className="lg:text-sm text-[13px] lg:px-2 px-1 lg:leading-7 text-black/75 leading-6.5">
-          <ShowAllText
-            openStateButton={<div className="hidden"></div>}
-            closeStateButton={
-              <div className="text-(--prim) lg:text-sm text-[13px] cursor-pointer flex items-center gap-1.5">
-                ادامه...
-              </div>
-            }
-          >
-            این کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این
-            کتاب رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه کردم
-            خیلی ارزشمنده که میشه همه این مطالب رو در یک کتاب پیدا کرد فقط باید
-            با فکری باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان خیلی کوتاهه
-            که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که این کتاب رو
-            بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و بار ها
-            خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم گیر
-            کردیم میتونیم . باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان
-            خیلی کوتاهه که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که
-            این کتاب رو بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و
-            بار ها خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم
-            گیر کردیم میتونیم .
-          </ShowAllText>
+          <div className={isInModal ? "" : "lg:block hidden"}>
+            <ShowAllText
+              openStateButton={<div className="hidden"></div>}
+              closeStateButton={
+                <div className="text-(--prim) text-sm cursor-pointer flex items-center gap-1.5">
+                  ادامه
+                  <div className="size-2.5 mb-1 translate-x-1 rotate-90">
+                    <ArrowDownIcon />
+                  </div>
+                </div>
+              }
+            >
+              این کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این
+              کتاب رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه
+              کردم خیلی ارزشمنده که میشه همه این مطالب رو در یک کتاب پیدا کرد
+              فقط باید با فکری باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان
+              خیلی کوتاهه که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر
+              که این کتاب رو بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار
+              ها و بار ها خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس
+              کردیم گیر کردیم میتونیم . باز خونده بشه و تعصبات کنار گذاشته بشه
+              عمر انسان خیلی کوتاهه که بخواد خودش تک تک به این نکات برسه پس صد
+              برابر بهتر که این کتاب رو بخونه و بهره مند شه فقط کتاب هایی
+              اینچنینی باید بار ها و بار ها خونده بشن تا ملکه ذهنمون بشن حتی
+              زمانی که تو زندگی حس کردیم گیر کردیم میتونیم .
+            </ShowAllText>
+          </div>
+          <div className={isInModal ? "hidden" : "block lg:hidden"}>
+            <OpinionBoxModalOpener>
+              ین کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این کتاب
+              رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه کردم خیلی
+              ارزشمنده که میشه همه این مطالب رو در یک کتاب پیدا کرد فقط باید با
+              فکری باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان خیلی کوتاهه که
+              بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که این کتاب رو
+              بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و بار ها
+              خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم گیر
+              کردیم میتونیم . باز خونده بشه و تعصبات کنار گذاشته بشه عمر انسان
+              خیلی کوتاهه که بخواد خودش تک تک به این نکات برسه پس صد برابر بهتر که
+              این کتاب رو بخونه و بهره مند شه فقط کتاب هایی اینچنینی باید بار ها و
+              بار ها خونده بشن تا ملکه ذهنمون بشن حتی زمانی که تو زندگی حس کردیم
+              گیر کردیم میتونیم .
+            </OpinionBoxModalOpener>
+          </div>
         </div>
       </div>
       <div className="flex justify-between items-end lg:mt-4 mt-2">

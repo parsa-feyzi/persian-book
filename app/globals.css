@@ -118,7 +118,7 @@ body {
 
 /*________________ discount _______________*/
 .discount {
-  @apply font-[iransans] text-black/45 font-bold line-through text-[15px]
+  @apply font-[iransans] text-black/60 font-bold line-through text-[15px]
 }
 
 /*________________ button _______________*/

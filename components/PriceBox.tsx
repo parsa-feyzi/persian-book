@@ -42,23 +42,26 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
             : size === "sm"
             ? "text-[17px]"
             : ""
-        } price`}
+        } flex items-end price`}
       >
-        {isDiscount && <span className="font-[dana-l] text-[15px] ps-0.5">%</span>}
+        {isDiscount && (
+          <span className="font-[dana-l] text-[16px] ps-0.5">%</span>
+        )}
         {value}
         {isPrice && (
           <span
             className={`${
               size === "lg"
-                ? "text-sm"
-                : size === "md"
                 ? "text-xs"
+                : size === "md"
+                ? "text-[11px]"
                 : size === "sm"
                 ? "text-[10px]"
                 : ""
-            } font-[dana-l] font-light ps-0.5 text-(--seco)`}
+            } font-[dana-l] ps-0.5 text-(--seco) flex flex-col items-end justify-top font-medium sm:-translate-y-0.5 -translate-y-1`}
           >
-            تومان
+              <div className="translate-y-[6px] translate-x-px">ن</div>
+              <div>توما</div>
           </span>
         )}
       </div>

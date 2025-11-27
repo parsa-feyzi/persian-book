@@ -12,8 +12,8 @@ import Image from "next/image";
 function Footer() {
   return (
     <>
-    <div className="bg-background sm:h-32 h-16"></div>
-      <footer className="relative overflow-hidden bg-white pt-8 md:pt-16 pb-4">
+      <div className="bg-background sm:h-32 h-16"></div>
+      <footer className="relative overflow-hidden bg-white pt-8 md:pt-16 lg:pb-4 pb-24">
         <div className="absolute z-0 md:opacity-85 opacity-50 -top-24 -right-24">
           <div className="absolute top-8 right-8 size-32 bg-(--prim)/4 rounded-full"></div>
           <div className="absolute top-0 right-0 size-54 bg-(--prim)/3.5 rounded-full"></div>
@@ -37,11 +37,7 @@ function Footer() {
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center sm:gap-1">
                 <div className="relative lg:size-14 sm:size-11 size-9">
-                  <Image
-                    fill
-                    src="/images/logo.png"
-                    alt={""}
-                  />
+                  <Image fill src="/images/logo.png" alt={""} />
                 </div>
                 <h1 className="lg:text-3xl sm:text-2xl text-xl mt-3">
                   <div className="font-[dana-b] sm:leading-4 leading-2">
@@ -100,9 +96,9 @@ function Footer() {
                 <p className="max-w-100 text-dark text-(--seco) leading-7 sm:text-base text-sm">
                   فروشگاه پرشین بوکــ با هدف ترویج کتاب‌ خوانی و دسترسی آسان به
                   منابع متنوع ایجاد شده است. اینجا می‌توانید تازه‌ ترین رمان‌ها،
-                  کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه کنید. ما تجربه
-                  خرید آسان، قیمت مناسب و ارسال سریع را برای دوست‌ داران کتاب
-                  فراهم کرده‌ایم.
+                  کتاب‌های آموزشی و کودکانه را از ناشران معتبر تهیه کنید. ما
+                  تجربه خرید آسان، قیمت مناسب و ارسال سریع را برای دوست‌ داران
+                  کتاب فراهم کرده‌ایم.
                 </p>
               </div>
               <p></p>

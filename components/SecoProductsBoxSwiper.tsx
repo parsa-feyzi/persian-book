@@ -41,10 +41,10 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, linkToAll, bgColor, te
         <div
           style={{ color: textColor }}
           className={`${
-            maxDiscount ? "lg:hidden mb-4" : "mb-6 mt-2"
+            maxDiscount ? "lg:hidden mb-4" : "mb-6"
           } flex items-center justify-between gap-2`}
         >
-          <div className="lg::text-xl sm:text-lg font-[dana-db]">{title}</div>
+          <div className="lg:text-xl sm:text-lg font-[dana-db]">{title}</div>
           {linkToAll && (
             <Link
               href={linkToAll}
@@ -201,7 +201,7 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, linkToAll, bgColor, te
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SeeMore href="/" styles="bg-white/85" />
+            <SeeMore href="/" styles="bg-white/60 backdrop-blur-xl" />
           </SwiperSlide>
         </Swiper>
       </div>

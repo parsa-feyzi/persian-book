@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, SetStateAction, Dispatch } from "react";
 
 export type T_Style = { styles?: CSSProperties };
 
@@ -9,6 +9,12 @@ export interface I_ListItem {
 }
 
 export type T_Size = "sm" | "md" | "lg";
+
+// _______________ IsModal Open types _______________ //
+export interface I_IsModalOpen {
+  isModalOpen: boolean;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+}
 
 // _______________ Category Tab types _______________ //
 export interface I_SortingTab {
