@@ -11,7 +11,7 @@ function Closer({ setIsOpen, icon = <CloseRoundedIcon /> }: I_Props) {
   return (
     <div
       onClick={() => setIsOpen(false)}
-      className="pt-1 active:scale-90 text-black/70!"
+      className="pt-1 active:scale-90 text-black/70! cursor-pointer"
     >
       {icon}
     </div>

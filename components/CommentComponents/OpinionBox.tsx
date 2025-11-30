@@ -1,6 +1,5 @@
 import { Rating } from "@mui/material";
 import ShowAllText from "../ShowAllText";
-
 import Thumbs from "./Thumbs";
 import ProfileComment from "./ProfileComment";
 import OpinionBoxModalOpener from "./OpinionBoxModalOpener";
@@ -8,7 +7,7 @@ import ArrowDownIcon from "../icons/ArrowDownIcon";
 
 function OpinionBox({ isInModal }: { isInModal?: boolean }) {
   return (
-    <article className={`${isInModal ? "border-t-4 border-(--seco)/10" : "border-t border-(--seco)/20"} lg:mt-0 py-3`}>
+    <article className={`${isInModal ? "md:border-t border-t-4 md:border-(--seco)/20 border-(--seco)/10" : "border-t border-(--seco)/20"} lg:mt-0 py-3`}>
       <div>
         <div className="flex justify-between items-center lg:mb-4 mb-2">
           <ProfileComment name="ممد نیگرزاده" role="خریدار" />
@@ -17,7 +16,7 @@ function OpinionBox({ isInModal }: { isInModal?: boolean }) {
           </div>
         </div>
         <div className="lg:text-sm text-[13px] lg:px-2 px-1 lg:leading-7 text-black/75 leading-6.5">
-          <div className={isInModal ? "" : "lg:block hidden"}>
+          <div className={isInModal ? "" : "md:block hidden"}>
             <ShowAllText
               openStateButton={<div className="hidden"></div>}
               closeStateButton={
@@ -43,7 +42,7 @@ function OpinionBox({ isInModal }: { isInModal?: boolean }) {
               زمانی که تو زندگی حس کردیم گیر کردیم میتونیم .
             </ShowAllText>
           </div>
-          <div className={isInModal ? "hidden" : "block lg:hidden"}>
+          <div className={isInModal ? "hidden" : "block md:hidden"}>
             <OpinionBoxModalOpener>
               ین کتاب در ابتدا ممکنه به ادم حس زرد بودن بده ولی وقتی دارم این کتاب
               رو میخونم به خیلی از نکته هاش خودم تو زندگی رسیدم و تجربه کردم خیلی

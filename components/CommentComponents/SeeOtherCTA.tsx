@@ -9,7 +9,7 @@ function SeeOtherCTA({ action, label }: I_Props) {
   return (
     <div
       onClick={action}
-      className="lg:hidden flex justify-center text-sm mt-4 items-center gap-2 text-(--prim)"
+      className="md:hidden flex justify-center text-sm mt-4 items-center gap-2 text-(--prim)"
     >
       <div>
         مشاهده <span className="price text-(--prim)!">1340</span> {label} دیگر

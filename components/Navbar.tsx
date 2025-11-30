@@ -45,15 +45,15 @@ function Navbar() {
             </div>
           </div>
           <div className="flex flex-row-reverse lg:gap-4 gap-3 items-center">
-            <Button className="md:grid backdrop-blur-xl hidden h-10 text-(--prim)">
+            <Button className="md:grid bg-(--seco)/3 backdrop-blur-xl hidden h-10 text-(--prim)">
               <span className="px-3 text-sm">ورود | ثبت‌نام</span>
             </Button>
-            <Button className="size-10 backdrop-blur-xl">
+            <Button className="size-10 bg-(--seco)/3 backdrop-blur-xl">
               <div className="size-5">
                 <CartIcon />
               </div>
             </Button>
-            <Button className="md:grid backdrop-blur-xl hidden size-10">
+            <Button className="md:grid bg-(--seco)/3 backdrop-blur-xl hidden size-10">
               <div className="size-5">
                 <SunIcon />
               </div>

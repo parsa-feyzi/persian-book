@@ -47,11 +47,11 @@ function SortingBox({ tabs, itemsNumber, label, seeOtherHandler }: I_Props) {
       </div>
       {seeOtherHandler ? (
         <>
-          <div className="lg:block hidden text-(--seco)/70 font-[dana-db] text-sm">
+          <div className="md:block hidden text-(--seco)/70 font-[dana-db] text-sm">
             <span className="price pe-1 text-(--seco)/70!">{itemsNumber}</span>
             {label}
           </div>
-          <div onClick={() => seeOtherHandler(true)} className="flex gap-1 lg:hidden items-center text-black/70! text-xs">
+          <div onClick={() => seeOtherHandler(true)} className="flex gap-1 md:hidden items-center text-black/70! text-xs">
             <div className="mt-0.5">
               مشاهده{" "}
               <span className="price pe-1 text-black/70!">{itemsNumber}</span>

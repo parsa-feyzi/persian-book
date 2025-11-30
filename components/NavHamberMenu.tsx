@@ -12,7 +12,7 @@ function NavHamberMenu() {
     <div className="md:hidden block">
       <Button
         onClick={() => setIsSidebarShow(true)}
-        className="md:hidden! grid! size-10"
+        className="md:hidden! bg-(--seco)/3 grid! size-10"
       >
         <div className="size-5">
           <MenuIcon />

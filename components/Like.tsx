@@ -7,13 +7,13 @@ function Like() {
   const [isLiked, setIsLiked] = useState(false);
 
   return (
-    <div onClick={() => setIsLiked(!isLiked)}>
+    <div onClick={() => setIsLiked(!isLiked)} className="active:scale-95 cursor-pointer">
       {isLiked ? (
-        <span className="text-red-400 cursor-pointer">
+        <span className="text-red-400">
         <FavoriteRoundedIcon sx={{ fontSize: 21 }} />
       </span>
       ) : (
-        <span className="cursor-pointer">
+        <span>
           <FavoriteBorderRoundedIcon sx={{ fontSize: 21 }} />
         </span>
       )}

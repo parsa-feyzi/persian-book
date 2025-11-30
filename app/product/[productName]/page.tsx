@@ -6,21 +6,18 @@ import ContentBox from "@/components/ContentBox";
 import OpinionBox from "@/components/CommentComponents/OpinionBox";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
-import SortingBox from "@/components/SortingBox";
 import QuestionBox from "@/components/CommentComponents/QuestionBox";
 import PaymentsBox from "@/components/PaymentsBox";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import AiSummaryOpinion from "./components/AiSummaryOpinion";
 import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
 import Image from "next/image";
 import PaymentsBoxNav from "@/components/PaymentsBoxNav";
 import ShowAllContentShadow from "@/components/ShowAllContentShadow";
-import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import Like from "@/components/Like";
 import Link from "next/link";
-import AllOpinionsModal from "@/components/CommentComponents/AllOpinionsModal";
 import OpinionsContainer from "./components/OpinionsContainer";
 import QuestionsContainer from "./components/QuestionsContainer";
+import Share from "@/components/Share";
 
 function Product() {
   return (
@@ -39,7 +36,7 @@ function Product() {
             <div className="lg:col-span-9 col-span-12 xl:me-10 lg:me-6 me-0">
               <div className="grid grid-cols-12 xl:mb-16 lg:mb-14 mb-8 xl:gap-x-0 gap">
                 <div className="relative lg:col-span-4 lg:block hidden">
-                  <div className="lg:flex justify-center lg:bg-(--base)/50 lg:p-6 rounded-lg">
+                  <div className="lg:flex justify-center lg:bg-(--bse)/50 lg:p-6 rounded-lg">
                     <img
                       className="my-auto xl:h-60 h-52 relative w-auto object-cover rounded-2xl shadow-xl/1"
                       src="/images/Atomic-Habits.webp"
@@ -47,13 +44,10 @@ function Product() {
                     />
                   </div>
                   <div className="lg:flex hidden mt-3 items-center gap-2 text-black/70">
-                    <div className="active:scale-95 absolute right-2 top-4 cursor-pointer">
-                      <ShareOutlinedIcon
-                        sx={{ fontSize: 19 }}
-                        className="rotate-180"
-                      />
+                    <div className="absolute right-3 top-10">
+                      <Share />
                     </div>
-                    <div className="active:scale-95 absolute right-2 top-12">
+                    <div className="absolute right-3 top-3">
                       <Like />
                     </div>
                   </div>
@@ -75,13 +69,10 @@ function Product() {
                         </Link>
                       </div>
                       <div className="lg:hidden flex items-center gap-5 text-black/70">
-                        <span className="active:scale-95 cursor-pointer">
-                          <ShareOutlinedIcon
-                            sx={{ fontSize: 19 }}
-                            className="rotate-180"
-                          />
+                        <span>
+                          <Share />
                         </span>
-                        <span className="active:scale-95">
+                        <span>
                           <Like />
                         </span>
                       </div>
@@ -96,7 +87,7 @@ function Product() {
                     </div>
                     <div
                       style={{ scrollbarWidth: "none" }}
-                      className="flex whitespace-nowrap overflow-x-scroll! items-center gap-2 xl:mt-7 lg:mt-5 sm:mt-6 mt-4 w-full max-w-full overflow-auto"
+                      className="flex whitespace-nowrap overflow-x-auto items-center w-full max-w-full gap-2 xl:mt-7 lg:mt-5 sm:mt-6 mt-4"
                     >
                       <div className="flex items-center">
                         <div className="text-amber-300">
@@ -259,14 +250,14 @@ function Product() {
                 </ShowAllContentShadow>
               </ContentBox>
               <OpinionsContainer>
-                <OpinionBox />
-                <OpinionBox />
-                <OpinionBox />
+                <OpinionBox isInModal />
+                <OpinionBox isInModal />
+                <OpinionBox isInModal />
               </OpinionsContainer>
               <QuestionsContainer>
-                <QuestionBox />
-                <QuestionBox />
-                <QuestionBox />
+                <QuestionBox isInModal />
+                <QuestionBox isInModal />
+                <QuestionBox isInModal />
               </QuestionsContainer>
             </div>
             <div className="lg:block hidden col-span-3 relative pt-4">

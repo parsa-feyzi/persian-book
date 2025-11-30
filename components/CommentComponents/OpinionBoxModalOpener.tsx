@@ -13,7 +13,9 @@ function OpinionBoxModalOpener({ children }: { children: ReactNode }) {
         >
           {children}
         </div>
-        <OpinionBoxModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <OpinionBoxModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
+          {children}
+        </OpinionBoxModal>
     </>
   );
 }

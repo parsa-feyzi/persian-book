@@ -18,8 +18,8 @@ function PaymentsBox() {
           size="sm"
         />
         <div className="mb-2"></div>
-        <Button className="xl:text-base text-sm w-full py-3 rounded-lg! text-white bg-(--prim)! hover:bg-(--prim)/90!">
-          <div className="duration-300">افزودن به سبد خرید</div>
+        <Button btnType="primary" size="lg" className="w-full!" >
+          افزودن به سبد خرید
         </Button>
         <div className="flex items-end gap-1 mt-2.5 text-(--prim)/80 justify-center">
           <GppGoodOutlinedIcon sx={{ fontSize: 21 }} />

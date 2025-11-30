@@ -8,8 +8,8 @@ function PaymentsBoxNav() {
       <Container>
         <div className="w-full! flex justify-between items-center">
           <div className="w-1/2">
-            <Button className="text-sm sm:py-3.5 py-3 px-4 w-full! min-w-38! rounded-lg! text-white bg-(--prim)! hover:bg-(--prim)/90!">
-              <div className="duration-300">افزودن به سبد خرید</div>
+            <Button btnType="primary" size="lg" className="w-full!" >
+              افزودن به سبد خرید
             </Button>
           </div>
           <div>
