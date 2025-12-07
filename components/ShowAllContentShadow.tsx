@@ -30,7 +30,7 @@ function ShowAllContentShadow({ children, initialHeight = 12, shadowStyles }: I_
         {isShow ? (
           <div className="flex justify-center items-center">
             <div className="text-(--prim) lg:text-sm text-[13px]">
-              مشاهده کمتر
+              بستن
             </div>
           </div>
         ) : (

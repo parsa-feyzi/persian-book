@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { Activity, useState } from "react";
 
 import Button from "./designSystem/Button";
 import MenuIcon from "./icons/MenuIcon";
 import Sidebar from "./Sidebar";
-
+import Cover from "./Cover";
 
 function NavHamberMenu() {
   const [isSidebarShow, setIsSidebarShow] = useState(false);
@@ -19,7 +19,10 @@ function NavHamberMenu() {
           <MenuIcon />
         </div>
       </Button>
-      <Sidebar isSidebarShow={isSidebarShow} setIsSidebarShow={setIsSidebarShow} />
+      <Activity mode={isSidebarShow ? "visible" : "hidden"}>
+        <Sidebar />
+        <Cover setIsModalOpen={setIsSidebarShow} z={10} />
+      </Activity>
     </div>
   );
 }

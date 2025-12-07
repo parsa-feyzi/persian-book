@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { Activity, useState } from "react";
 import { useParams } from "next/navigation";
 
 import {
@@ -42,11 +42,9 @@ function Share() {
       </div>
       {/* modal */}
       <div className="z-10">
-        <Cover
-          isModalOpen={isShowShareModal}
-          setIsModalOpen={setIsShowShareModal}
-          z={10}
-        />
+        <Activity mode={isShowShareModal ? "visible" : "hidden"}>
+          <Cover setIsModalOpen={setIsShowShareModal} z={10} />
+        </Activity>
         <div
           className={`${
             isShowShareModal ? "bottom-0" : "sm:hidden -bottom-[50vh]"

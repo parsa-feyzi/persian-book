@@ -124,8 +124,8 @@ function Footer() {
                 ]}
               />
             </div>
-            <Link href="https://trustseal.enamad.ir/?id=445206code=SgLtG6QTvIyffV2cjuiTe4sSPvMqsNSf">
-              <div className="relative lg:w-52! sm:w-48 w-42">
+            <Link target="_blank" href="https://trustseal.enamad.ir/?id=445206code=SgLtG6QTvIyffV2cjuiTe4sSPvMqsNSf">
+              <div className="relative lg:mt-5 sm:mt-6 lg:w-52 lg:h-40 sm:w-48 sm:h-37 w-42 h-32">
                 <Image
                   fill
                   src="/images/enamad.png"

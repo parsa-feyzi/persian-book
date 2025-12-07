@@ -93,6 +93,44 @@ body {
   @apply -right-3;
 }
 
+/*________________ sidebar animation _______________*/
+.sidebar {
+  animation: sidebarAnimation 400ms;
+  -webkit-animation: sidebarAnimation 400ms;
+}
+
+@keyframes sidebarAnimation {
+  0% {
+    transform: translateX(16rem);
+    -webkit-transform: translateX(16rem);
+    -moz-transform: translateX(16rem);
+    -ms-transform: translateX(16rem);
+    -o-transform: translateX(16rem);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+/*________________ page_cover animation _______________*/
+.page_cover {
+  animation: cover_pageAnimation 400ms;
+  -webkit-animation: cover_pageAnimation 400ms;
+}
+
+@keyframes cover_pageAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*________________ grid template columns _______________*/
 @media (max-width: 40rem) {
   .grid_auto_fit {
@@ -108,36 +146,36 @@ body {
 
 /*________________ padding for navbar _______________*/
 .p-nav {
-  @apply md:pt-19.5 pt-16
+  @apply md:pt-19.5 pt-16;
 }
 
 /*________________ price _______________*/
 .price {
-  @apply font-[iransans] text-black/85 font-bold
+  @apply font-[iransans] text-black/85 font-bold;
 }
 
 /*________________ discount _______________*/
 .discount {
-  @apply font-[iransans] text-black/60 font-bold line-through text-[15px]
+  @apply font-[iransans] text-black/60 font-bold line-through text-[15px];
 }
 
 /*________________ button _______________*/
 .btn {
-  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-none active:scale-95
+  @apply flex items-center justify-center gap-1.5 cursor-pointer rounded-lg px-4 py-2 outline-none border-none active:scale-95;
 }
 
 .btn-out {
-  @apply flex items-center justify-center font-[dana-db] gap-1.5 cursor-pointer rounded-lg sm:px-4 px-3 sm:py-2 py-1.5 outline-none border-2 active:scale-95
+  @apply flex items-center justify-center font-[dana-db] gap-1.5 cursor-pointer rounded-lg sm:px-4 px-3 sm:py-2 py-1.5 outline-none border-2 active:scale-95;
 }
 
 /*________________ dot _______________*/
 .dot {
-  @apply size-1.5 bg-(--seco)/30 rounded-full mx-2
+  @apply size-1.5 bg-(--seco)/30 rounded-full mx-2;
 }
 
 /*________________ MuiRating _______________*/
 .MuiRating-iconEmpty {
-  @apply opacity-40
+  @apply opacity-40;
 }
 
 /*________________ swiper _______________*/
@@ -183,7 +221,7 @@ body {
 }
 /* seco products box */
 .SecoProductBox {
-  @apply bg-black/0 hover:bg-black
+  @apply bg-black/0 hover:bg-black;
 }
 
 .SecoProductBox-image {
