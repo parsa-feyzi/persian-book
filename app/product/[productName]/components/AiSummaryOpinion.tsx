@@ -1,8 +1,7 @@
 import { Rating } from "@mui/material";
-import ShowAllText from "@/components/ShowAllText";
-import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
-import Image from "next/image";
+
 import ShowAllContentShadow from "@/components/ShowAllContentShadow";
+
 
 function AiSummaryOpinion() {
   return (
@@ -13,8 +12,7 @@ function AiSummaryOpinion() {
       <div className="font-[dana-b] flex items-center justify-between w-full pb-1 mb-2 border-b-2 border-(--seco)/10">
         <div className="flex items-center lg:gap-2">
           <div className="lg:size-10 size-16 lg:relative absolute lg:top-0 -top-2.5 lg:right-0 -right-2">
-            <Image
-              fill
+            <img
               className="lg:opacity-85 opacity-20 object-cover"
               src="/images/aiLogo.png"
               alt=""

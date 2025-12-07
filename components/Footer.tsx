@@ -1,13 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
-import Container from "./Container";
-import MediaButton from "./MediaButton";
+
 import InstagramIcon from "./icons/InstagramIcon";
 import TelegramIcon from "./icons/TelegramIcon";
 import WhatsappIcon from "./icons/WhatsappIcon";
+import GeoIcon from "./icons/GeoIcon";
+import Container from "./Container";
+import MediaButton from "./MediaButton";
 import InfoBox from "./InfoBox";
 import FooterList from "./FooterList";
-import GeoIcon from "./icons/GeoIcon";
-import Image from "next/image";
+
 
 function Footer() {
   return (

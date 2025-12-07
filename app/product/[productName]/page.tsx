@@ -1,23 +1,25 @@
+import Link from "next/link";
+
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
+
 import Container from "@/components/Container";
 import Button from "@/components/designSystem/Button";
 import InfoBox from "./components/InfoBox";
 import DetailsBox from "./components/DetailsBox";
 import ContentBox from "@/components/ContentBox";
 import OpinionBox from "@/components/CommentComponents/OpinionBox";
-import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
-import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import QuestionBox from "@/components/CommentComponents/QuestionBox";
 import PaymentsBox from "@/components/PaymentsBox";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
-import Image from "next/image";
 import PaymentsBoxNav from "@/components/PaymentsBoxNav";
 import ShowAllContentShadow from "@/components/ShowAllContentShadow";
 import Like from "@/components/Like";
-import Link from "next/link";
 import OpinionsContainer from "./components/OpinionsContainer";
 import QuestionsContainer from "./components/QuestionsContainer";
 import Share from "@/components/Share";
+
 
 function Product() {
   return (
@@ -36,7 +38,7 @@ function Product() {
             <div className="lg:col-span-9 col-span-12 xl:me-10 lg:me-6 me-0">
               <div className="grid grid-cols-12 xl:mb-16 lg:mb-14 mb-8 xl:gap-x-0 gap">
                 <div className="relative lg:col-span-4 lg:block hidden">
-                  <div className="lg:flex justify-center lg:bg-(--bse)/50 lg:p-6 rounded-lg">
+                  <div className="lg:flex justify-center lg:p-6 rounded-lg">
                     <img
                       className="my-auto xl:h-60 h-52 relative w-auto object-cover rounded-2xl shadow-xl/1"
                       src="/images/Atomic-Habits.webp"
@@ -107,9 +109,8 @@ function Product() {
                       <a href="#opinion">
                         <Button className="flex! items-center sm:text-[13px] text-[11px] font-[dana-db] pb-0.5 pt-1 px-3 bg-linear-to-l from-fuchsia-50 to-white hover:bg-white/70 text-(--seco)">
                           <span className="size-5 relative mb-0.5 me-0.5">
-                            <Image
-                              fill
-                              className="opacity-50 object-cover"
+                            <img
+                              className="size-full opacity-50 object-cover"
                               src="/images/aiLogo.png"
                               alt=""
                             />

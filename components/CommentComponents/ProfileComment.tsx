@@ -22,9 +22,8 @@ function ProfileComment({ name, role, image, size = "md" }: I_Props) {
             : ""
         } relative rounded-full shrink-0 mt-1 grow-0`}
       >
-        <Image
-          fill
-          className="inline-block rounded-full"
+        <img
+          className="inline-block size-full rounded-full"
           src={`/images/${image || "personeImage.png"}`}
           alt=""
           style={{ objectFit: "cover" }}

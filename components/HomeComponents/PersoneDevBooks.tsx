@@ -3,8 +3,8 @@
 import { SwiperSlide } from "swiper/react";
 import HomeSection from "./HomeSection";
 import HomeSwiperTemplate from "./HomeSwiperTemplate";
-import ProductBox from "./ProductBox";
-import SeeMore from "./SeeMore";
+import ProductBox from "../ProductBox";
+import SeeMore from "../SeeMore";
 
 function PersoneDevBooks() {
   return (

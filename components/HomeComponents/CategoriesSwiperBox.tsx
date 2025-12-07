@@ -3,7 +3,7 @@
 import { Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import CategoryBox from "./CategoryBox"
-import LeafIcon from "./icons/LeafIcon"
+import LeafIcon from "../icons/LeafIcon"
 
 function CategoriesSwiperBox() {
   return (

@@ -1,15 +1,17 @@
 "use client";
+import { ReactNode, useState } from "react";
 
+import MapsUgcRoundedIcon from "@mui/icons-material/MapsUgcRounded";
+import { Rating } from "@mui/material";
+
+import AiSummaryOpinion from "./AiSummaryOpinion";
 import ContentBox from "@/components/ContentBox";
 import Button from "@/components/designSystem/Button";
-import { ReactNode, useState } from "react";
-import AiSummaryOpinion from "./AiSummaryOpinion";
 import SortingBox from "@/components/SortingBox";
 import AllCommentsModal from "@/components/CommentComponents/AllCommentsModal";
 import SeeOtherCTA from "@/components/CommentComponents/SeeOtherCTA";
 import OpinionBox from "@/components/CommentComponents/OpinionBox";
-import MapsUgcRoundedIcon from "@mui/icons-material/MapsUgcRounded";
-import { Rating } from "@mui/material";
+
 
 function OpinionsContainer({ children }: { children: ReactNode }) {
   const [isModalOpen, setIsModalOpen] = useState(false);

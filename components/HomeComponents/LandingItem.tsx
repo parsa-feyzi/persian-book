@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./designSystem/Button";
-import DiscountBox from "./DiscountBox";
-import ArrowIcon from "./icons/ArrowIcon";
+import Button from "../designSystem/Button";
+import DiscountBox from "../DiscountBox";
+import ArrowIcon from "../icons/ArrowIcon";
 import Link from "next/link";
 
 interface I_Props {

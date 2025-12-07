@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import CirkelArrowIcon from "./icons/CirkelArrowIcon";
+
 
 interface I_Props { href: string, styles: string }
 

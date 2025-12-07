@@ -1,9 +1,12 @@
 "use client";
 
-import { I_SortingTab } from "@/types/types";
-import SwapVertRoundedIcon from "@mui/icons-material/SwapVertRounded";
 import { Dispatch, SetStateAction } from "react";
+
+import SwapVertRoundedIcon from "@mui/icons-material/SwapVertRounded";
+
+import { I_SortingTab } from "@/types/types";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
+
 
 interface I_Props {
   tabs: I_SortingTab[];

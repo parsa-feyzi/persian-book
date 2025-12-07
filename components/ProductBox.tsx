@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import Price from "./Price";
+
 
 function ProductBox() {
   return (
@@ -18,17 +20,17 @@ function ProductBox() {
           عادت‌های اتمی اثر جیمز کلیر انتشارات نشرنوین
         </Link>
         <div className="flex pt-2 justify-between items-end">
-          <div>
-            <div className="discount text-[13px]! translate-y-2.5">{(250000).toLocaleString()}</div>
-            <div className="price">
-              <Price price={250000} styles="text-[17px]! items-end" />
-            </div>
-          </div>
           <div className="text-sm font-[dana-b] bg-(--prim) px-2 rounded-full text-white h-[21px] pt-px">
             <span className="font-[iransans] font-bold ms-px text-white!">
               74
             </span>
             %
+          </div>
+          <div className="translate-y-1">
+            <div className="discount text-[13px]! translate-y-2.5">{(250000).toLocaleString()}</div>
+            <div className="price">
+              <Price price={250000} styles="text-[19px]! items-end" />
+            </div>
           </div>
         </div>
       </div>

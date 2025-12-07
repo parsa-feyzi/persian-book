@@ -1,19 +1,21 @@
 "use client";
-import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import { useState } from "react";
-import Closer from "./Closer";
-import ShareMediaOptions from "./ShareMediaOptions";
+import { useParams } from "next/navigation";
+
 import {
   ContentCopyRounded,
   DoneOutlineRounded,
   Instagram,
   MailOutlineRounded,
   MoreHorizRounded,
+  ShareOutlined,
   Telegram,
   WhatsApp,
 } from "@mui/icons-material";
+
+import Closer from "./Closer";
+import ShareMediaOptions from "./ShareMediaOptions";
 import Cover from "./Cover";
-import { useParams } from "next/navigation";
 
 function Share() {
   const [isShowShareModal, setIsShowShareModal] = useState(false);
@@ -36,7 +38,7 @@ function Share() {
         onClick={() => setIsShowShareModal(true)}
         className="cursor-pointer active:scale-95"
       >
-        <ShareOutlinedIcon sx={{ fontSize: 19 }} className="rotate-180" />
+        <ShareOutlined sx={{ fontSize: 19 }} className="rotate-180" />
       </div>
       {/* modal */}
       <div className="z-10">

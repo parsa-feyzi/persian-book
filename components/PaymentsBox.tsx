@@ -1,6 +1,8 @@
+import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
+
 import PriceBox from "@/components/PriceBox";
 import Button from "./designSystem/Button";
-import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
+
 
 function PaymentsBox() {
   return (

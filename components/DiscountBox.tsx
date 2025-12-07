@@ -1,5 +1,4 @@
 import { T_Size } from "@/types/types";
-import { CSSProperties } from "react";
 
 interface I_Props {
   color: string;

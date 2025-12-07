@@ -1,8 +1,9 @@
 "use client";
-
 import { useState } from "react";
+
 import Button from "./designSystem/Button";
 import SearchIcon from "./icons/SearchIcon";
+
 
 function NavSearchBox() {
   const [searchVal, setSearchVal] = useState("");

@@ -1,10 +1,9 @@
-import BestsellerProducts from "@/components/BestsellerProducts";
-import CategoriesSwiperBox from "@/components/CategoriesSwiperBox";
+import BestsellerProducts from "@/components/HomeComponents/BestsellerProducts";
+import CategoriesSwiperBox from "@/components/HomeComponents/CategoriesSwiperBox";
 import Container from "@/components/Container";
-
-import LandingSwiper from "@/components/LandingSwiper";
-import LatestProducts from "@/components/LatestProducts";
-import PersoneDevBooks from "@/components/PersoneDevBooks";
+import LandingSwiper from "@/components/HomeComponents/LandingSwiper";
+import LatestProducts from "@/components/HomeComponents/LatestProducts";
+import PersoneDevBooks from "@/components/HomeComponents/PersoneDevBooks";
 import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
 
 export default async function Home() {
@@ -25,6 +24,9 @@ export default async function Home() {
         <Container>
           <LatestProducts />
           <BestsellerProducts />
+          <PersoneDevBooks />
+          <PersoneDevBooks />
+          <PersoneDevBooks />
           <PersoneDevBooks />
         </Container>
       </div>

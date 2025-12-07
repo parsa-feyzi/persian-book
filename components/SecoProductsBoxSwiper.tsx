@@ -1,13 +1,15 @@
 "use client";
+import { ReactNode } from "react";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import SecoProductBox from "./SecoProductBox";
 import DiscountBox from "./DiscountBox";
 import { Navigation } from "swiper/modules";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
 import SeeMore from "./SeeMore";
-import { ReactNode } from "react";
-import Link from "next/link";
+
 
 interface I_Props {
   maxSlide: number;

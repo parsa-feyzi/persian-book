@@ -1,9 +1,12 @@
 import { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
+
 import SearchIcon from "./icons/SearchIcon";
 import MoonIcon from "./icons/MoonIcon";
 import Button from "./designSystem/Button";
-import Link from "next/link";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
+import Cover from "./Cover";
+
 
 interface I_Props {
   isSidebarShow: boolean;
@@ -58,12 +61,7 @@ function Sidebar({ isSidebarShow, setIsSidebarShow }: I_Props) {
           <span className="px-3">ورود | ثبت‌نام</span>
         </Button>
       </div>
-      <div
-        onClick={() => setIsSidebarShow(false)}
-        className={`${
-          isSidebarShow ? "block bg-black/40" : "hidden"
-        } h-screen md:hidden block w-screen fixed z-10 top-0 right-0`}
-      ></div>
+      <Cover isModalOpen={isSidebarShow} setIsModalOpen={setIsSidebarShow} z={10}  />
     </div>
   );
 }

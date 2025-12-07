@@ -1,5 +1,6 @@
-import { I_ListItem } from "@/types/types"
 import Link from "next/link"
+
+import { I_ListItem } from "@/types/types"
 
 function FooterListItem({ title, href }: I_ListItem) {
   return (

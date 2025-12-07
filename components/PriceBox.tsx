@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
+
 import { T_Size } from "@/types/types";
+
 
 interface I_Props {
   title: string;
@@ -60,7 +62,7 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
                 : ""
             } font-[dana-l] ps-0.5 text-(--seco) flex flex-col items-end justify-top font-medium sm:-translate-y-0.5 -translate-y-1`}
           >
-              <div className="translate-y-[6px] translate-x-px">ن</div>
+              <div className="translate-y-1.5 translate-x-px">ن</div>
               <div>توما</div>
           </span>
         )}

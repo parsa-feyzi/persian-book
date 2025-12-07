@@ -2,7 +2,7 @@
 
 import HomeSwiperTemplate from "./HomeSwiperTemplate";
 import HomeSection from "./HomeSection";
-import ProductBox from "./ProductBox";
+import ProductBox from "../ProductBox";
 import { SwiperSlide } from "swiper/react";
 
 function BestsellerProducts() {

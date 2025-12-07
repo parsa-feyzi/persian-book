@@ -1,11 +1,13 @@
-import Container from "./Container";
+import Image from "next/image";
 import Link from "next/link";
+
 import CartIcon from "./icons/CartIcon";
-import Button from "./designSystem/Button";
 import SunIcon from "./icons/SunIcon";
+import Button from "./designSystem/Button";
+import Container from "./Container";
 import NavSearchBox from "./NavSearchBox";
 import NavHamberMenu from "./NavHamberMenu";
-import Image from "next/image";
+
 
 function Navbar() {
   return (
@@ -25,7 +27,7 @@ function Navbar() {
                 صفحه اصلی
               </Link>
               <Link
-                href={"/stor"}
+                href={"/store"}
                 className="hover:text-(--prim) lg:text-[15px] text-sm font-[dana-db]"
               >
                 فروشگاه
