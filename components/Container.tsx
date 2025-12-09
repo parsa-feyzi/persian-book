@@ -1,10 +1,10 @@
-import React, { CSSProperties } from 'react'
+import { ReactNode } from "react";
 
-interface I_Props { children: React.ReactNode; styles?: CSSProperties }
+interface I_Props { children: ReactNode; styles?: string }
 
 function Container({children, styles}: I_Props) {
   return (
-    <div style={styles} className='container lg:px-[2vw] md:px-[4vw] px-[6vw] mx-auto'>{children}</div>
+    <div className={`${styles} container lg:px-[2vw] md:px-[4vw] px-[6vw] mx-auto`}>{children}</div>
   )
 }
 

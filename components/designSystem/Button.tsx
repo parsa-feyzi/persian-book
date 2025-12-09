@@ -38,7 +38,7 @@ function Button({
           : ""
       }
        overflow-hidden flex gap-1 justify-center items-center cursor-pointer active:scale-95`}
-      style={style}
+       style={style}
     >
       {children}
     </button>

@@ -131,6 +131,21 @@ body {
   }
 }
 
+/*________________ drawer children box _______________*/
+.drawerChildrenBox {
+  animation: drawerChildrenBoxAnimation 300ms;
+  -webkit-animation: drawerChildrenBoxAnimation 300ms;
+}
+
+@keyframes drawerChildrenBoxAnimation {
+  0% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
 /*________________ grid template columns _______________*/
 @media (max-width: 40rem) {
   .grid_auto_fit {
@@ -166,6 +181,11 @@ body {
 
 .btn-out {
   @apply flex items-center justify-center font-[dana-db] gap-1.5 cursor-pointer rounded-lg sm:px-4 px-3 sm:py-2 py-1.5 outline-none border-2 active:scale-95;
+}
+
+/*________________ scrollbar_hidden _______________*/
+.scrollbar_hidden {
+  scrollbar-width: none;
 }
 
 /*________________ dot _______________*/

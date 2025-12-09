@@ -17,7 +17,9 @@ function HomeSection({ href, title, children }: I_Props) {
         <Link href={href} className="text-(--seco) sm:w-auto w-full justify-end hover:text-(--prim) flex items-center gap-0.5">
           <div className="sm:text-sm text-xs font-[dana-db]">همه کتاب‌ها</div>
           <div className="size-3.5 mb-0.5">
-            <ArrowDownIcon styles={{ rotate: "90deg" }} />
+            <div className="rotate-90">
+              <ArrowDownIcon />
+            </div>
           </div>
         </Link>
       </div>

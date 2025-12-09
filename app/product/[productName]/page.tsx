@@ -1,25 +1,18 @@
 import Link from "next/link";
 
-import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 
 import Container from "@/components/Container";
 import Button from "@/components/designSystem/Button";
 import InfoBox from "./components/InfoBox";
-import DetailsBox from "./components/DetailsBox";
-import ContentBox from "@/components/ContentBox";
 import OpinionBox from "@/components/CommentComponents/OpinionBox";
 import QuestionBox from "@/components/CommentComponents/QuestionBox";
 import PaymentsBox from "@/components/PaymentsBox";
-import SecoProductsBoxSwiper from "@/components/SecoProductsBoxSwiper";
 import PaymentsBoxNav from "@/components/PaymentsBoxNav";
-import ShowAllContentShadow from "@/components/ShowAllContentShadow";
 import Like from "@/components/Like";
 import OpinionsContainer from "./components/OpinionsContainer";
 import QuestionsContainer from "./components/QuestionsContainer";
 import Share from "@/components/Share";
-import Image from "next/image";
 import SpecificationsBox from "./components/SpecificationsBox";
 import ProductIntroductionBox from "./components/ProductIntroductionBox";
 import OfferBoxes from "./components/OfferBoxes";
@@ -72,8 +65,7 @@ function Product() {
                       </span>
                     </div>
                     <div
-                      style={{ scrollbarWidth: "none" }}
-                      className="flex whitespace-nowrap overflow-x-auto items-center w-full max-w-full gap-2 xl:mt-7 lg:mt-5 sm:mt-6 mt-4"
+                      className="scrollbar_hidden flex whitespace-nowrap overflow-x-auto items-center w-full max-w-full gap-2 xl:mt-7 lg:mt-5 sm:mt-6 mt-4"
                     >
                       <div className="flex items-center">
                         <div className="text-amber-300">

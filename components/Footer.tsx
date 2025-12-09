@@ -34,7 +34,7 @@ function Footer() {
           <div className="absolute -bottom-32 -left-32 size-142 bg-(--prim)/1.5 rounded-full"></div>
           <div className="absolute -bottom-40 -left-40 size-164 bg-(--prim)/1 rounded-full"></div>
         </div>
-        <Container styles={{ position: "relative" }}>
+        <Container styles="relative!">
           <div className="pb-4 mb-4 sm:pb-8 sm:mb-8 border-b-2 border-b-(--seco)/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center sm:gap-1">

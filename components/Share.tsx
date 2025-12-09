@@ -59,8 +59,7 @@ function Share() {
               این کالا را با دوستان خود به اشتراک بگذارید!
             </div>
             <div
-              style={{ scrollbarWidth: "none" }}
-              className="flex flex-row-reverse whitespace-nowrap justify-between overflow-x-auto overflow-y-hidden sm:mt-8 mt-6 px-4 items-center w-full max-w-full gap-6"
+              className="scrollbar_hidden flex flex-row-reverse whitespace-nowrap justify-between overflow-x-auto overflow-y-hidden sm:mt-8 mt-6 px-4 items-center w-full max-w-full gap-6"
             >
               {/* instagram */}
               <ShareMediaOptions

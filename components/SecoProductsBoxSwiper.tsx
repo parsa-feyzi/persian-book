@@ -10,7 +10,6 @@ import { Navigation } from "swiper/modules";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
 import SeeMore from "./SeeMore";
 
-
 interface I_Props {
   maxSlide: number;
   isFull?: boolean;
@@ -22,7 +21,16 @@ interface I_Props {
   maxDiscount?: number;
 }
 
-function SecoProductsBoxSwiper({ maxSlide, isFull, title, linkToAll, bgColor, textColor = "#fff", bgOpacity = 100, maxDiscount = 0 }: I_Props) {
+function SecoProductsBoxSwiper({
+  maxSlide,
+  isFull,
+  title,
+  linkToAll,
+  bgColor,
+  textColor = "#fff",
+  bgOpacity = 100,
+  maxDiscount = 0,
+}: I_Props) {
   return (
     <section
       className={`secoProductsBoxSwiper lg:px-4 relative overflow-hidden`}
@@ -54,7 +62,9 @@ function SecoProductsBoxSwiper({ maxSlide, isFull, title, linkToAll, bgColor, te
             >
               <div>همه کتاب‌ها</div>
               <div className="size-3 mb-[3px]">
-                <ArrowDownIcon styles={{ rotate: "90deg" }} />
+                <div className="rotate-90">
+                  <ArrowDownIcon />
+                </div>
               </div>
             </Link>
           )}

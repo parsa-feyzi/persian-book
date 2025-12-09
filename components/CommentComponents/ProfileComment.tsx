@@ -9,24 +9,27 @@ interface I_Props {
 }
 
 function ProfileComment({ name, role, image, size = "md" }: I_Props) {
+  const lgTopSizes = size == "lg" ? 48 : size == "md" ? 40 : size == "sm" ? 32 : 0;
+  const lgLowSizes = size == "lg" ? 40 : size == "md" ? 32 : size == "sm" ? 28 : 0;
+
   return (
     <div className="flex items-center gap-3">
-      <div
-        className={`${
-          size === "lg"
-            ? "lg:size-12 size-10"
-            : size === "md"
-            ? "lg:size-10 size-8"
-            : size === "sm"
-            ? "lg:size-8 size-7"
-            : ""
-        } relative rounded-full shrink-0 mt-1 grow-0`}
-      >
-        <img
-          className="inline-block size-full rounded-full"
+      <div className="lg:block hidden">
+        <Image
+          width={lgTopSizes}
+          height={lgTopSizes}
+          className="inline-block object-cover!"
           src={`/images/${image || "personeImage.png"}`}
           alt=""
-          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <div className="lg:hidden block">
+        <Image
+          width={lgLowSizes}
+          height={lgLowSizes}
+          className="inline-block object-cover!"
+          src={`/images/${image || "personeImage.png"}`}
+          alt=""
         />
       </div>
       <div className="flex items-center mt-2">

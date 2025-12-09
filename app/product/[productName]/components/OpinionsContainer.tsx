@@ -41,8 +41,7 @@ function OpinionsContainer({ children }: { children: ReactNode }) {
               ]}
             />
             <div
-              style={{ scrollbarWidth: "none" }}
-              className="lg:max-h-[calc(100vh-10rem)] max-h-[calc(100vh-18rem)] overflow-y-auto"
+              className="scrollbar_hidden lg:max-h-[calc(100vh-10rem)] max-h-[calc(100vh-18rem)] overflow-y-auto"
             >
               <div className="md:hidden block">
                 <OpinionBox />
