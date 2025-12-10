@@ -46,7 +46,7 @@ function SecoProductsBoxSwiper({
         }}
         className={`${maxDiscount ? "lg:px-0 px-4" : "lg:px-8 px-4"} ${
           isFull ? "lg:rounded-2xl" : "lg:rounded-2xl sm:rounded-xl rounded-lg"
-        } flex-col items-center justify-between lg:py-5 py-4 bg-amber-50/40`}
+        } pry_border flex-col items-center justify-between lg:py-5 py-4`}
       >
         <div
           style={{ color: textColor }}

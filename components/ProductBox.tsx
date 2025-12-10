@@ -5,8 +5,8 @@ import Price from "./Price";
 
 function ProductBox() {
   return (
-    <div className="bg-white border border-(--seco)/20 rounded-xl  overflow-hidden">
-      <div className="bg-(--base)">
+    <div className="pry_border bg-white/70 rounded-xl  overflow-hidden">
+      <div className="bg-(--base)/70">
         <Link href={"/product/1"} className="py-4 w-fit mx-auto block">
           <img
             className="max-h-42 sm:h-auto h-34 shadow-lg/5 object-cover rounded-xl"

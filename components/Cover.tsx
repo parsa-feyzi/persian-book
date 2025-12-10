@@ -9,10 +9,10 @@ function Cover({ z, isBlur, setIsModalOpen }: I_Props) {
   return (
     <div
       onClick={() => setIsModalOpen(false)}
-      // style={{ zIndex: z }}
+      style={{ zIndex: z }}
       className={`${
         isBlur ? "backdrop-blur-xs" : ""
-      } z-${z} page_cover fixed top-0 left-0 right-0 w-screen h-screen bg-black/25`}
+      } page_cover fixed top-0 left-0 right-0 w-screen h-screen bg-black/25`}
     ></div>
   );
 }

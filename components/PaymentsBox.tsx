@@ -6,7 +6,7 @@ import Button from "./designSystem/Button";
 
 function PaymentsBox() {
   return (
-    <div className="sticky top-29 flex flex-col justify-between borde border-(--seco)/10 bg-white rounded-xl p-5">
+    <div className="sticky top-29 flex flex-col justify-between borde border-(--seco)/10 bg-white/70 pry_border rounded-xl p-5">
       <div>
         <PriceBox title="قیمت" value={(250000).toLocaleString()} isPrice />
         <PriceBox title="سود شما" value={(30000).toLocaleString()} isPrice />

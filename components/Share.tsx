@@ -23,9 +23,7 @@ function Share() {
   const { productName } = useParams();
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(
-      `http://localhost:3000/product/${productName?.toString()}`
-    );
+    navigator.clipboard.writeText(`http://localhost:3000/product/${productName?.toString()}`);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);

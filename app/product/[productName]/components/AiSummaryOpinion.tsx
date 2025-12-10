@@ -7,7 +7,7 @@ function AiSummaryOpinion() {
   return (
     <div
       id="aiSummaryOpinion"
-      className="relative overflow-hidden bg-background p-4 rounded-xl lg:mb-12 mb-8"
+      className="relative pry_border overflow-hidden bg-background p-4 rounded-xl lg:mb-12 mb-8"
     >
       <div className="font-[dana-b] flex items-center justify-between w-full pb-1 mb-2 border-b-2 border-(--seco)/10">
         <div className="flex items-center lg:gap-2">

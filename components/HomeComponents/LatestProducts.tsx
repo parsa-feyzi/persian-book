@@ -1,5 +1,3 @@
-import Link from "next/link";
-import ArrowDownIcon from "../icons/ArrowDownIcon";
 import ProductBox from "../ProductBox";
 import HomeSection from "./HomeSection";
 

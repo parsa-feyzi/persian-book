@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import CartIcon from "./icons/CartIcon";
-import SunIcon from "./icons/SunIcon";
-import Button from "./designSystem/Button";
-import Container from "./Container";
+import CartIcon from "../icons/CartIcon";
+import SunIcon from "../icons/SunIcon";
+import Button from "../designSystem/Button";
+import Container from "../Container";
 import NavSearchBox from "./NavSearchBox";
 import NavHamberMenu from "./NavHamberMenu";
+import NavCart from "./NavCart";
 
 
 function Navbar() {
   return (
-    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-2xl z-2">
+    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-xl z-2">
       <Container>
         <div className="flex items-center justify-between">
           <NavHamberMenu />
@@ -47,15 +48,11 @@ function Navbar() {
             </div>
           </div>
           <div className="flex flex-row-reverse lg:gap-4 gap-3 items-center">
-            <Button className="md:grid bg-(--seco)/3 backdrop-blur-xl hidden h-10 text-(--prim)">
+            <Button className="pry_border md:grid bg-(--seco)/2 backdrop-blur-xl hidden h-11 text-(--prim)">
               <span className="px-3 text-sm">ورود | ثبت‌نام</span>
             </Button>
-            <Button className="size-10 bg-(--seco)/3 backdrop-blur-xl">
-              <div className="size-5">
-                <CartIcon />
-              </div>
-            </Button>
-            <Button className="md:grid bg-(--seco)/3 backdrop-blur-xl hidden size-10">
+            <NavCart />
+            <Button className="pry_border md:grid bg-(--seco)/2 backdrop-blur-xl hidden size-11">
               <div className="size-5">
                 <SunIcon />
               </div>

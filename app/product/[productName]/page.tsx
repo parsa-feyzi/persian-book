@@ -83,7 +83,7 @@ function Product() {
                         </div>
                       </div>
                       <a href="#opinion">
-                        <Button className="flex! items-center sm:text-[13px] text-[11px] font-[dana-db] pb-0.5 pt-1 px-3 bg-linear-to-l from-fuchsia-50 to-white hover:bg-white/70 text-(--seco)">
+                        <Button className="flex! pry_border items-center sm:text-[13px] text-[11px] font-[dana-db] pb-0.5 pt-1 px-3 bg-linear-to-l from-fuchsia-50 to-white hover:bg-white/70 text-(--seco)">
                           <span className="size-5 relative mb-0.5 me-0.5">
                             <img
                               className="size-full opacity-50 object-cover"
@@ -129,6 +129,7 @@ function Product() {
                 <QuestionBox isInModal />
               </QuestionsContainer>
             </div>
+            {/* payments boxes */}
             <div className="lg:block hidden col-span-3 relative pt-4">
               <PaymentsBox />
             </div>

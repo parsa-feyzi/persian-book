@@ -131,21 +131,6 @@ body {
   }
 }
 
-/*________________ drawer children box _______________*/
-.drawerChildrenBox {
-  animation: drawerChildrenBoxAnimation 300ms;
-  -webkit-animation: drawerChildrenBoxAnimation 300ms;
-}
-
-@keyframes drawerChildrenBoxAnimation {
-  0% {
-    scale: 0.9;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
 /*________________ grid template columns _______________*/
 @media (max-width: 40rem) {
   .grid_auto_fit {
@@ -188,9 +173,23 @@ body {
   scrollbar-width: none;
 }
 
+/*________________ pry_border _______________*/
+.pry_border { 
+  @apply border border-(--seco)/10
+}
+
 /*________________ dot _______________*/
 .dot {
   @apply size-1.5 bg-(--seco)/30 rounded-full mx-2;
+}
+
+/*________________ navCartModal _______________*/
+.nav_cart_modal_content_container::-webkit-scrollbar-thumb {
+  @apply bg-black/15 hover:bg-black/30 rounded-full
+}
+.nav_cart_modal_content_container::-webkit-scrollbar {
+  width: 0.25rem;
+  @apply bg-white/0!
 }
 
 /*________________ MuiRating _______________*/

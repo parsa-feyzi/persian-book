@@ -9,7 +9,7 @@ interface I_Props {
 
 function ContentBox({ title, children, leftButton, htmlId }: I_Props) {
   return (
-    <div id={htmlId} className="relative lg:px-6 lg:py-8 px-4 py-5 overflow-hidden rounded-xl xl:mt-8 mt-6 bg-white">
+    <div id={htmlId} className="relative lg:px-6 lg:py-8 px-4 py-5 overflow-hidden rounded-xl xl:mt-8 mt-6 bg-white/70 pry_border">
       <div className="flex justify-between items-center sm:mb-8 mb-5">
         <div className="font-[dana-b] lg:text-xl sm:text-lg">{title}</div>
         <div>{leftButton}</div>

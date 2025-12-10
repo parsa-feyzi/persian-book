@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
 
-import Button from "./designSystem/Button";
-import SearchIcon from "./icons/SearchIcon";
+import Button from "../designSystem/Button";
+import SearchIcon from "../icons/SearchIcon";
 
 
 function NavSearchBox() {
   const [searchVal, setSearchVal] = useState("");
   return (
     <>
-      <div className="w-70 lg:flex hidden items-center p-1.5 rounded-full bg-(--seco)/3 backdrop-blur-xl h-10">
+      <div className="pry_border w-70 lg:flex hidden items-center p-1.5 rounded-full bg-(--seco)/2 backdrop-blur-xl h-11">
         <input
           type="text"
           placeholder="جستجو بین کتاب‌ها، نویسندگان، ژانرها..."

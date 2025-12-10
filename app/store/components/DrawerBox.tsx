@@ -13,15 +13,15 @@ function DrawerBox({ title, children, isLatestItem }: Props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
-    <div className={`${isLatestItem ? "" : "border-b border-black/5"} py-4`}>
-      <div onClick={() => setIsDrawerOpen(!isDrawerOpen)} className="flex items-center justify-between cursor-pointer">
+    <div className={`${isLatestItem ? "" : "border-b border-black/5"} pb-4`}>
+      <div onClick={() => setIsDrawerOpen(!isDrawerOpen)} className="flex pt-4 items-center justify-between cursor-pointer">
         <div className="text-[15px]">{title}</div>
         <div className={`${ isDrawerOpen ? "rotate-180" : "rotate-0" } duration-200 text-black/40`}>
           <KeyboardArrowDownRounded />
         </div>
       </div>
       <Activity mode={isDrawerOpen ? "visible" : "hidden"}>
-        <div className="drawerChildrenBox pt-4">{children}</div>
+        <div className="pt-4">{children}</div>
       </Activity>
     </div>
   );
