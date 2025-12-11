@@ -28,7 +28,7 @@ function NavCart() {
       {/* modal */}
       <Activity mode={isShowCartModal ? "visible" : "hidden"}>
         <Cover setIsModalOpen={setIsShowCartModal} z={-1} />
-        <NavCartModal />
+        <NavCartModal setIsShowCartModal={setIsShowCartModal} />
       </Activity>
     </div>
   );

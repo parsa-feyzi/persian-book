@@ -7,8 +7,8 @@ import Button from "@/components/designSystem/Button";
 import InfoBox from "./components/InfoBox";
 import OpinionBox from "@/components/CommentComponents/OpinionBox";
 import QuestionBox from "@/components/CommentComponents/QuestionBox";
-import PaymentsBox from "@/components/PaymentsBox";
-import PaymentsBoxNav from "@/components/PaymentsBoxNav";
+import PaymentsBox from "@/app/product/[productName]/components/ProductPaymentsBox";
+import PaymentsBoxNav from "@/app/product/[productName]/components/ProductPaymentsBoxNav";
 import Like from "@/components/Like";
 import OpinionsContainer from "./components/OpinionsContainer";
 import QuestionsContainer from "./components/QuestionsContainer";
@@ -28,7 +28,7 @@ function Product() {
       <div className="lg:bg-white/0 bg-background lg:rounded-t-none rounded-t-4xl lg:mt-0 mt-76 pt-4">
         <Container>
           <div className="grid grid-cols-12 lg:mt-12">
-            <div className="lg:col-span-9 col-span-12 xl:me-10 lg:me-6 me-0">
+            <div className="lg:col-span-9 col-span-full xl:me-10 lg:me-6 me-0">
               <div className="grid grid-cols-12 xl:mb-16 lg:mb-14 mb-8 xl:gap-x-0 gap">
                 <ProductImagesBoxInDesktop src="Atomic-Habits.webp" />
                 <div className="lg:col-span-8 col-span-12  lg:ms-6 ms-0 flex flex-col justify-between gap-4 py-2">

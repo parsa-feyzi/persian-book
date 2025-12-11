@@ -6,7 +6,7 @@ import QuantityBox from "../QuantityBox";
 function NavCartModalItem() {
   return (
       <div className={`border-b mx-2 border-black/5 py-4 px-2 flex items-center gap-3`}>
-        <Link href={"/"} className="relative w-24 h-32 pry_border rounded-lg min-w-24">
+        <Link href={"/product/1"} className="relative w-24 h-32 pry_border rounded-lg min-w-24">
           <Image
             fill
             className="size-full rounded-lg"

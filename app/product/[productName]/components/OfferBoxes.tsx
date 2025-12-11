@@ -12,7 +12,7 @@ function OfferBoxes() {
           }
           linkToAll="/"
           maxSlide={6}
-          bgColor="#014121"
+          bgColor="#01412169"
           textColor="#000101"
           bgOpacity={3}
         />
@@ -26,7 +26,7 @@ function OfferBoxes() {
           }
           linkToAll="/"
           maxSlide={6}
-          bgColor="#014121"
+          bgColor="#01412169"
           textColor="#000101"
           bgOpacity={3}
         />

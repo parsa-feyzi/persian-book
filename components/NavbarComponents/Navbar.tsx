@@ -12,7 +12,7 @@ import NavCart from "./NavCart";
 
 function Navbar() {
   return (
-    <nav className="fixed w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-xl z-2">
+    <nav className="fixed pry_border w-full md:py-5 py-3 bg-(--base)/30 backdrop-blur-xl z-2">
       <Container>
         <div className="flex items-center justify-between">
           <NavHamberMenu />

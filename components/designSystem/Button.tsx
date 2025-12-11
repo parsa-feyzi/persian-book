@@ -6,14 +6,7 @@ type T_Button = {
   size?: T_Size;
 } & ComponentProps<"button">;
 
-function Button({
-  children,
-  btnType = "normal",
-  size = "md",
-  style,
-  onClick,
-  className,
-}: T_Button) {
+function Button({ children, btnType = "normal", size = "md", style, onClick, className }: T_Button) {
   return (
     <button
       onClick={onClick}
@@ -37,7 +30,7 @@ function Button({
           ? "xl:text-xs text-[11px]"
           : ""
       }
-       overflow-hidden flex gap-1 justify-center items-center cursor-pointer active:scale-95`}
+       overflow-hidden flex gap-1 justify-center items-center cursor-pointer active:scale-[0.98]`}
        style={style}
     >
       {children}

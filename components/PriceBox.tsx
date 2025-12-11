@@ -4,14 +4,15 @@ import { T_Size } from "@/types/types";
 
 
 interface I_Props {
-  title: string;
+  title: ReactNode;
   value: ReactNode;
   size?: T_Size;
   isPrice?: boolean;
   isDiscount?: boolean;
+  isProfit?: boolean;
 }
 
-function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
+function PriceBox({ title, value, size = "md", isPrice, isDiscount, isProfit }: I_Props) {
   return (
     <div
       className={`${
@@ -20,7 +21,7 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
     >
       <div
         className={`
-        ${isDiscount ? "text-red-700!" : ""}    
+        ${isDiscount ? "text-red-700!" : (isProfit && "text-green-700!")}
         ${
           size === "lg"
             ? "xl:text-lg text-[17px]"
@@ -35,7 +36,7 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
       </div>
       <div
         className={`
-            ${isDiscount ? "text-red-700!" : ""}
+            ${isDiscount ? "text-red-700!" : (isProfit && "text-green-700!")}
         ${
           size === "lg"
             ? "text-2xl"
@@ -50,7 +51,7 @@ function PriceBox({ title, value, size = "md", isPrice, isDiscount }: I_Props) {
           <span className="font-[dana-l] text-[16px] ps-0.5">%</span>
         )}
         {value}
-        {isPrice && (
+        {(isPrice || isProfit) && (
           <span
             className={`${
               size === "lg"
